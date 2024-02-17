@@ -3689,6 +3689,10 @@ a {
     /* padding-right: 70px */
 }
 
+.rowdefault > th {
+    font-weight: normal;
+}
+
 input.border-hover[disabled],
 input.border-hover[disabled]:hover {
     border: 1px solid transparent !important
@@ -3696,6 +3700,17 @@ input.border-hover[disabled]:hover {
 
 .label-input {
     display: inline-block
+}
+.border-hover {
+    transition: .4s
+}
+
+.border-hover:hover {
+    border: 1px solid #1e88e5!important
+}
+
+.border-hover:focus {
+    border-color: #1e88e5
 }
 
 .mr-12px,

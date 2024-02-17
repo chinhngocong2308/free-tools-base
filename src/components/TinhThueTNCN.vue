@@ -130,7 +130,7 @@
                                     </tr>
                                     <tr v-if="tntt > 0">
                                         <th>Thuế thu nhập cá nhân(*)</th>
-                                        <td>{{ numberFormat(tax) }}</td>
+                                        <td>{{ numberFormat(thuePhaiNopTheoBac[1]) }}</td>
                                     </tr>
                                     <tr v-if="tntt <= 0">
                                         <th>Thuế thu nhập cá nhân(*)</th>
@@ -141,58 +141,14 @@
                             <p class="text-left text-highlight bold" style="margin: 10px 0;">(*) Chi tiết thuế thu nhập cá nhân (VNĐ)</p>
                             <table class="gross-net-table table" >
                                 <tbody>
-                                    <tr class="rownote">
-                                        <th>Mức chịu thuế</th>
-                                        <th>Thuế suất</th>
-                                        <th>Tiền nộp (đ)</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Đến 5 triệu VNĐ</td>
-                                        <td>5%</td>
-                                        <td v-if="0 < tax && tax - 250000 < 0">{{ numberFormat(tax) }}</td>
-                                        <td v-if="tax - 250000 > 0">250,000</td>
-                                        <td v-if="tax - 250000 < 0">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trên 5 triệu VNĐ đến 10 triệu VNĐ</td>
-                                        <td>10%</td>
-                                        <td v-if="tax - 250000 < 500000 && tax - 250000 > 0">{{ numberFormat(tax - 250000) }}</td>
-                                        <td v-if="tax - 250000 > 500000 && tax - 250000 > 0">500,000</td>
-                                        <td v-if="tax - 250000 < 0">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trên 10 triệu VNĐ đến 18 triệu VNĐ</td>
-                                        <td>15%</td>
-                                        <td v-if="tax - 250000 - 500000 < 1200000 && tax - 250000 - 500000 > 0">{{ numberFormat(tax - 250000 - 500000) }}</td>
-                                        <td v-if="tax - 250000 - 500000 > 1200000 && tax - 250000 - 500000 > 0">1,200,000</td>
-                                        <td v-if="tax - 250000 - 500000 < 0">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trên 18 triệu VNĐ đến 32 triệu VNĐ</td>
-                                        <td>20%</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 < 2800000 && tax - 250000 - 500000 - 1200000 > 0">{{ numberFormat(tax - 250000 - 500000 - 1200000) }}</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 > 2800000 && tax - 250000 - 500000 - 1200000 > 0">2,800,000</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 < 0">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trên 32 triệu VNĐ đến 52 triệu VNĐ</td>
-                                        <td>25%</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 < 5000000 && tax - 250000 - 500000 - 1200000 - 2800000 > 0">{{ numberFormat(tax - 250000 - 500000 - 1200000 - 2800000) }}</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 > 5000000 && tax - 250000 - 500000 - 1200000 - 2800000 > 5000000">5,000,000</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 < 0">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trên 52 triệu VNĐ đến 80 triệu VNĐ</td>
-                                        <td>30%</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 < 8400000 && tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 > 0">{{ numberFormat(tax - 250000 - 500000 - 1200000 - 2800000 - 5000000) }}</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 > 8400000 && tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 > 8400000">8,400,000</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 < 0">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trên 80 triệu VNĐ</td>
-                                        <td>35%</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 - 8400000 > 8400000 && tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 - 8400000 > 0">{{ numberFormat(tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 - 8400000) }}</td>
-                                        <td v-if="tax - 250000 - 500000 - 1200000 - 2800000 - 5000000 - 8400000 < 0">0</td>
+                                    <tr v-for="(row, index) in thuePhaiNopTheoBac[0]" :key="index" :class="index === 0 ? `rownote` : 'rowdefault'">
+                                        <th>{{ row.dinhmuc }}</th>
+
+                                        <th v-if="index === 0">{{ (row.thuesuat) }}</th>
+                                        <th v-else>{{ (row.thuesuat) }} %</th>
+
+                                        <th v-if="index === 0">{{ (row.tiennop) }}</th>
+                                        <th v-else>{{ numberFormat(row.tiennop) }}</th>
                                     </tr>
                                 </tbody>
                             </table>
@@ -363,7 +319,8 @@ export default {
             tntt: '',
             bhtn_salary: '',
             emailCustomer: null,
-            thu_nhap_truoc_thue: null
+            thu_nhap_truoc_thue: null,
+            thuePhaiNopTheoBac: null
         };
     },
     watch: {
@@ -439,7 +396,6 @@ export default {
                 return result;
             } catch (error) {
                 alert('Có lỗi khi gửi email');
-                console.log(error)
             }
 
         },
@@ -463,21 +419,119 @@ export default {
             }
         },
         luongtoithieuvung() {
+            let MucLuongCoSoDoanhNghiep_V1 = 93600000;
+            let MucLuongCoSoDoanhNghiep_V2 = 83200000;
+            let MucLuongCoSoDoanhNghiep_V3 = 72800000;
+            let MucLuongCoSoDoanhNghiep_V4 = 65000000;
             if (this.vung == '1') {
-                return 93600000;
+                return MucLuongCoSoDoanhNghiep_V1;
             }
             else if (this.vung == '2') {
-                return 83200000;
+                return MucLuongCoSoDoanhNghiep_V2;
             }
             else if (this.vung == '3') {
-                return 72800000;
+                return MucLuongCoSoDoanhNghiep_V3;
             }
             else if (this.vung == '4') {
-                return 65000000;
+                return MucLuongCoSoDoanhNghiep_V4;
             }
             else {
-                return 93600000;
+                return MucLuongCoSoDoanhNghiep_V1;
             }
+        },
+        tinhThuePhaiNopTheoBac(tax){
+            // let bacthuephainop = '', thuephainopdiengiai = '',
+            let bac = [], arr = [] , thuephainop = 0,
+            thuesuat = [5, 10, 15, 20, 25, 30, 35],
+            dinhmuc = [
+                'Đến 5 triệu VNĐ', 'Trên 5 triệu VNĐ đến 10 triệu VNĐ', 'Trên 10 triệu VNĐ đến 18 triệu VNĐ',
+                'Trên 18 triệu VNĐ đến 32 triệu VNĐ', 'Trên 32 triệu VNĐ đến 52 triệu VNĐ',
+                'Trên 52 triệu VNĐ đến 80 triệu VNĐ', 'Trên 80 triệu VNĐ'
+            ];
+            if (tax <= 5000000) {
+                bac.push(tax * 5 / 100);
+                arr.push(this.formatNumber(Math.round(tax), '.', '.'));
+            } else if (tax > 5000000 && tax <= 10000000) {
+                bac.push(5000000 * 5 / 100);
+                bac.push((tax - 5000000) * 10 / 100);
+                arr.push('5.000.000');
+                arr.push('(' + this.formatNumber(Math.round(tax), '.', '.') + ' - 5.000.000)');
+            } else if (tax > 10000000 && tax <= 18000000) {
+                bac.push(5000000 * 5 / 100);
+                bac.push((10000000 - 5000000) * 10 / 100);
+                bac.push((tax - 10000000) * 15 / 100);
+                arr.push('5.000.000');
+                arr.push('(10.000.000 - 5.000.000)');
+                arr.push('(' + this.formatNumber(Math.round(tax), '.', '.') + ' - 10.000.000)');
+            } else if (tax > 18000000 && tax <= 32000000) {
+                bac.push(5000000 * 5 / 100);
+                bac.push((10000000 - 5000000) * 10 / 100);
+                bac.push((18000000 - 10000000) * 15 / 100);
+                bac.push((tax - 18000000) * 20 / 100);
+                arr.push('5.000.000');
+                arr.push('(10.000.000 - 5.000.000)');
+                arr.push('(18.000.000 - 10.000.000)');
+                arr.push('(' + this.formatNumber(Math.round(tax), '.', '.') + ' - 18.000.000)');
+            } else if (tax > 32000000 && tax <= 52000000) {
+                bac.push(5000000 * 5 / 100);
+                bac.push((10000000 - 5000000) * 10 / 100);
+                bac.push((18000000 - 10000000) * 15 / 100);
+                bac.push((32000000 - 18000000) * 20 / 100);
+                bac.push((tax - 32000000) * 25 / 100);
+                arr.push('5.000.000');
+                arr.push('(10.000.000 - 5.000.000)');
+                arr.push('(18.000.000 - 10.000.000)');
+                arr.push('(32.000.000 - 18.000.000)');
+                arr.push('(' + this.formatNumber(Math.round(tax), '.', '.') + ' - 32.000.000)');
+            } else if (tax > 52000000 && tax <= 80000000) {
+                bac.push(5000000 * 5 / 100);
+                bac.push((10000000 - 5000000) * 10 / 100);
+                bac.push((18000000 - 10000000) * 15 / 100);
+                bac.push((32000000 - 18000000) * 20 / 100);
+                bac.push((52000000 - 32000000) * 25 / 100);
+                bac.push((tax - 52000000) * 30 / 100);
+                arr.push('5.000.000');
+                arr.push('(10.000.000 - 5.000.000)');
+                arr.push('(18.000.000 - 10.000.000)');
+                arr.push('(32.000.000 - 18.000.000)');
+                arr.push('(52.000.000 - 32.000.000)');
+                arr.push('(' + this.formatNumber(Math.round(tax), '.', '.') + ' - 52.000.000)');
+            } else if (tax > 80000000) {
+                bac.push(5000000 * 5 / 100);
+                bac.push((10000000 - 5000000) * 10 / 100);
+                bac.push((18000000 - 10000000) * 15 / 100);
+                bac.push((32000000 - 18000000) * 20 / 100);
+                bac.push((52000000 - 32000000) * 25 / 100);
+                bac.push((80000000 - 52000000) * 30 / 100);
+                bac.push((tax - 80000000) * 35 / 100);
+                arr.push('5.000.000');
+                arr.push('(10.000.000 - 5.000.000)');
+                arr.push('(18.000.000 - 10.000.000)');
+                arr.push('(32.000.000 - 18.000.000)');
+                arr.push('(52.000.000 - 32.000.000)');
+                arr.push('(80.000.000 - 52.000.000)');
+                arr.push('(' + this.formatNumber(Math.round(tax), '.', '.') + ' - 80.000.000)');
+            }
+            let arrBacThue = [{
+                dinhmuc: 'Mức chịu thuế',
+                thuesuat: 'Thuế suất',
+                tiennop: 'Tiền nộp (đ)'
+            }];
+
+            for (let i = 0; i < bac.length; i++) {
+                let bacThue = {};
+                // bacthuephainop += '<p><strong>+ Bậc ' + (i + 1) + '</strong>: Thu nhập tính thuế ' + dinhmuc[i] + ', thuế suất ' + thuesuat[i] + '%:</p>' +
+                //     '<p>' + arr[i] + ' × ' + thuesuat[i] + '% = ' + this.formatNumber(Math.round(bac[i]), '.', '.') + '</p>';
+                thuephainop += bac[i];
+                // thuephainopdiengiai += this.formatNumber(Math.round(bac[i]), '.', '.') + (i < bac.length - 1 ? ' + ' : '');
+                arrBacThue.push(Object.assign(bacThue, {
+                    dinhmuc: dinhmuc[i],
+                    thuesuat: thuesuat[i],
+                    tiennop: bac[i],
+                })) 
+
+            }
+            return [arrBacThue, thuephainop];
         },
         personalIncomeTax() {
             let data = $('#form-salary').serialize();
@@ -508,27 +562,21 @@ export default {
             //eslint-disable-next-line
             this.contract_salary = parseFloat(this.luongDongBaoHiem.replace(/\,/g, ""));
 
-            this.bhxh_salary = this.contract_salary > 29800000 ? 29800000 : this.contract_salary;
+            this.bhxh_salary = this.contract_salary > 36000000 ? 36000000 : this.contract_salary;
             //bhtn_salary = contract_salary > 85172000 ? 85172000 : contract_salary;
             this.bhtn_salary = this.contract_salary > this.luongtoithieuvung() ? this.luongtoithieuvung() : this.contract_salary;
             this.insurance = this.bhxh_salary * 9.5 / 100 + this.bhtn_salary * 1 / 100;
             this.thu_nhap_truoc_thue = this.luong - this.insurance;
             this.children_subtract = children * giamTruNguoiPhuThuoc;
+            //tntt - thu nhap tinh thue
             this.tntt = gross - this.insurance - giamTruGiaCanhBanThan - this.children_subtract;
             var tax_level = this.get_tax_level(this.tntt);
             this.tax_level_name = tax_level.name;
             this.tax = tax_level.value;
+            this.thuePhaiNopTheoBac = this.tinhThuePhaiNopTheoBac(this.tntt)?.length > 0 ? this.tinhThuePhaiNopTheoBac(this.tntt) : [];
             this.luong = this.formatNumber(this.luong, ',', ',');
             this.luongDongBaoHiem = this.formatNumber(this.luongDongBaoHiem, ',', ',');
 
-            
-            // console.log("tax_level_name", this.tax_level_name)
-            // console.log("tax_level_name", this.tax)
-            // console.log("contract_salary", this.contract_salary)
-            // console.log("bhxh_salary", this.bhxh_salary)
-            // console.log("insurance", this.insurance)
-            // console.log("children_subtract", this.children_subtract)
-            // console.log("tntt", this.tntt)
             if(this.tntt) {
                 this.showResult = true;
             } else {
@@ -551,6 +599,9 @@ export default {
             if(x === 0) {
                 return x
             } else {
+                //eslint-disable-next-line
+                x = x.toString().replace(/^0+/g, '').replace(/\,/g, '');
+                x = Math.trunc(parseFloat(x))
                 return x ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : null;
             }
         }
