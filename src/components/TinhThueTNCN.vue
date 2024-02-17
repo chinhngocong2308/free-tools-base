@@ -422,7 +422,7 @@ export default {
             try {
                 let email = this.emailCustomer
             if (!email) {
-                alert('Vui long nhap email');
+                alert('Bạn chưa nhập địa chỉ e-mail !');
                 return true
             }
             let result = await axios.post(
@@ -479,14 +479,22 @@ export default {
         },
         personalIncomeTax() {
             let data = $('#form-salary').serialize();
+            let gross = 0;
+            let giamTruGiaCanhBanThan = 11000000;
+            let giamTruNguoiPhuThuoc = 4400000;
+            let children = parseFloat(this.nguoiPhuThuoc);
+
             data = data.split("&");
             //eslint-disable-next-line
             this.luong = this.luong?.replace(/\,/g, "")
             this.luong = this.luong?.replace(/\./g, "")
             if (isNaN(parseFloat(this.luong))) {
-                alert('Thu Nhập (Gross) Không Hợp Lệ');
+                alert('Xin Vui lòng nhập Thu Nhập (Gross) của bạn!');
                 this.luong = '';
                 return
+            }
+            if (this.luong) {
+                gross = this.luong;
             }
             if (data.includes('dongBaoHiem=trenChinhThuc')) {
                 this.luongDongBaoHiem = this.luong;
@@ -494,19 +502,9 @@ export default {
                 //eslint-disable-next-line
                 this.luongDongBaoHiem = this.luongDongBaoHiem?.replace(/\,/g, "");
             }
-            let giamTruGiaCanhBanThan = 11000000;
-            let giamTruNguoiPhuThuoc = 4400000;
-            let gross = 0;
-            if (this.luong) {
-                //eslint-disable-next-line
-                gross = parseFloat(this.luong.replace(/\,/g, ""));
-            } else {
-                alert('Vui lòng nhập thu nhập (gross).')
-                return
-            }
+
             //eslint-disable-next-line
             this.contract_salary = parseFloat(this.luongDongBaoHiem.replace(/\,/g, ""));
-            let children = parseFloat(this.nguoiPhuThuoc);
 
             this.bhxh_salary = this.contract_salary > 29800000 ? 29800000 : this.contract_salary;
             //bhtn_salary = contract_salary > 85172000 ? 85172000 : contract_salary;
