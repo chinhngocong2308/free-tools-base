@@ -6,6 +6,7 @@ import TinhBHXHBatBuocTuNguyen from './components/TinhBHXHBatBuocTuNguyen.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
+    { name: "home", path: "/", component: TinhThueTNCN },
     { path: '/tinh-thue-tncn', component: TinhThueTNCN},
     { path: '/tinh-bhxh-bat-buoc', component: TinhBHXHBatBuoc },
     { path: '/tinh-bhxh-tu-nguyen', component: TinhBHXHTuNguyen},
