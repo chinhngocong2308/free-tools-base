@@ -199,12 +199,14 @@
                         </div>
                         <div class="form-email text-center" style="margin-top: 40px;">
                             <hr style="margin-top: 40px;margin-bottom: 15px;">
-                                <p class="text-center text-highlight bold text-email" style="text-align: center;">Nhận Kết quả qua địa chỉ e-mail</p>
-                                <div  class="input-data submit-email" style="min-width: 250px;">
+                            <p class="text-center text-highlight bold text-email" style="text-align: center;">Nhận Kết quả qua địa chỉ e-mail</p>
+                            <div class="form-subcribe d-flex">
+                                <div  class="input-data submit-email">
                                     <input type="text" name="" placeholder="Nhập e-mail người nhận vào đây" class="input-subscribe" v-model="emailCustomer"
                                             @keyup.enter="sendEmailCustomer"/> 
                                 </div>
                                 <button type="submit" title="Gửi" class="btn btn-success-custom" @click="sendEmailCustomer" style="margin: 10px 0;"><span>Gửi ngay</span></button>
+                            </div>
                         </div>
                     </div>
                 </div>

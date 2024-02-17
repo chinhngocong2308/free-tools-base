@@ -5882,3 +5882,13 @@ div input[type=radio]~.icon-radio:after {
 .btn:focus {
     outline: unset;
 }
+
+.form-subcribe {
+    justify-content: center;
+}
+
+.form-subcribe .input-data {
+    min-width: 320px;
+    height: 40px;
+    margin-top: 10px;
+}
