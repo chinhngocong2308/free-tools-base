@@ -28,7 +28,7 @@ a {
 }
 
 #personal-income-tax .input-data {
-    min-width: 312px;
+    min-width: 280px;
 }
 
 #personal-income-tax .radio-salary {
@@ -3803,6 +3803,7 @@ div input[type=radio]~.icon-radio:after {
 
 .form-subcribe {
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .form-subcribe .input-data {
