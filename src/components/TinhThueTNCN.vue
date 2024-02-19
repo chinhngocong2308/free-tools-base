@@ -519,6 +519,9 @@ export default {
             }];
 
             for (let i = 0; i < bac.length; i++) {
+                if (bac[i] < 0) {
+                    bac[i] = 0;
+                }
                 let bacThue = {};
                 // bacthuephainop += '<p><strong>+ Bậc ' + (i + 1) + '</strong>: Thu nhập tính thuế ' + dinhmuc[i] + ', thuế suất ' + thuesuat[i] + '%:</p>' +
                 //     '<p>' + arr[i] + ' × ' + thuesuat[i] + '% = ' + this.formatNumber(Math.round(bac[i]), '.', '.') + '</p>';
