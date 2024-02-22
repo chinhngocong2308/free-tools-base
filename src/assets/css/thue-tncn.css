@@ -1,7 +1,20 @@
 h3 {
     margin: 40px 0 0;
 }
-
+body {
+    --e-global-color-primary: #1E88E5;
+    --e-global-color-secondary: #2F2F2F;
+    --e-global-color-text: #272727;
+    --e-global-color-accent: #00236C;
+    --e-global-typography-primary-font-family: "Roboto";
+    --e-global-typography-primary-font-weight: 600;
+    --e-global-typography-secondary-font-family: "Roboto Slab";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Roboto";
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-family: "Roboto";
+    --e-global-typography-accent-font-weight: 500;
+}
 /* ul {
     list-style-type: none;
     padding: 0;
@@ -15,10 +28,13 @@ li {
 a {
     color: #42b983;
 }
+#personal-income-tax {
+    margin-top: -284px;
+}
 
 #personal-income-tax .title--header {
     color: #1e88e5;
-    font-family: Inter, sans-serif;
+    font-family: Roboto, Segoe UI, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -35,7 +51,7 @@ a {
     align-items: center;
     color: #212f3f;
     display: flex;
-    font-family: Inter, sans-serif;
+    font-family: Roboto, Segoe UI, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -48,7 +64,7 @@ a {
 #personal-income-tax .btn-custom {
     border-radius: 5px;
     display: flow-root;
-    font-family: Inter, sans-serif;
+    font-family: Roboto, Segoe UI, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -69,22 +85,30 @@ a {
     padding: 8px 24px;
     pointer-events: none
 }
-
+.box-gray.w-50 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto 0;
+}
 #personal-income-tax .box-gray {
     align-items: flex-start;
     align-self: stretch;
     background: #f4f5f5;
     border-radius: 5px;
     flex-grow: 0;
+    border-radius: 10px;
     margin: 8px 4px;
     order: 1;
-    padding: 8px 12px
+    padding: 12px 20px;
 }
 
 #personal-income-tax .box-gray .title-block {
     color: #424e5c;
-    font-family: Inter, sans-serif;
-    font-size: 15px;
+    font-family: Roboto, Segoe UI, sans-serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px
@@ -93,7 +117,7 @@ a {
 #personal-income-tax .box-gray .number-yellow {
     font-family: "Inter", sans-serif;
     color: #1e88e5;
-    font-size: 19px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px
@@ -124,18 +148,21 @@ a {
     text-align: center
 }
 
-#personal-income-tax .box-gray.box--description .description {
+#personal-income-tax .box--description .description {
     color: #424e5c;
     display: inline-flex;
     flex: none;
     flex-grow: 1;
-    font-family: Inter, sans-serif;
-    font-size: 15px;
+    margin-left: 8px;
+    text-align: left;
+    font-family: Roboto, Segoe UI, sans-serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
     order: 1;
     width: 95%
+
 }
 
 #personal-income-tax .btn-success-custom {
@@ -3327,7 +3354,7 @@ figure.image.image-style-align-right {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1320px
+        max-width: 985px
     }
 }
 
@@ -3340,18 +3367,21 @@ figure.image.image-style-align-right {
     content: "\f0e0";
     margin: 8px;
 }
+
 .box-white {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: -1px 1px 6px rgba(0, 0, 0, .05);
     margin-bottom: 16px;
     overflow: hidden;
-    padding: 16px;
+    padding: 50px 66px;
     width: 100%;
     position: relative;
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.16);
-    -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
+
+
 }
 
 .box-white .title {
@@ -3716,10 +3746,14 @@ input.border-hover[disabled]:hover {
 .mr-12px,
 .mr-2,
 .other {
-    margin-right: 12px;
+    margin-right: 16px;
     font-weight: bold;
 }
 
+.info-rule {
+    border-bottom: 1px solid;
+    border-color: rgba(207, 207, 207, 1);
+}
 .items-center {
     align-items: center
 }
@@ -3804,7 +3838,7 @@ div input[type=radio]~.icon-radio:after {
 }
 
 .title-box {
-    font-family: Inter, sans-serif;
+    font-family: Roboto, Segoe UI, sans-serif;
     font-weight: 700
 }
 .btn.active.focus, 
@@ -3831,7 +3865,12 @@ div input[type=radio]~.icon-radio:after {
     width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-    .form-salary {
-        width: 40%;
-    }
+
+}
+
+@media (min-width: 768px) {
+
+}
+#welcome{
+    background-color: #F1F7FF;
 }
