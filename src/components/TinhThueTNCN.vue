@@ -115,103 +115,103 @@
                 </div>
             </div>
         </div>
+        <div class="showResult">
+            <div class="text-center" v-if="showResult">
+                <p class="text-result">
+                    <b style="color: #1e88e5">Xin chào bạn!</b>
+                    <br> Cảm ơn bạn đã dùng công cụ này của Base.vn!<br>
+                    Với Dữ liệu đã cung cấp thì Số tiền Thuế TNCN là: {{ numberFormat(tax) }} đ</p>
+            </div>
 
-        <div class="text-center" v-if="showResult">
-            <p class="text-result">
-                <b style="color: #1e88e5">Xin chào bạn!</b>
-                <br> Cảm ơn bạn đã dùng công cụ này của Base.vn!<br>
-                 Với Dữ liệu đã cung cấp thì Số tiền Thuế TNCN là: {{ numberFormat(tax) }} đ</p>
-        </div>
+            <div class="container" v-if="showResult">
+                <div class="col-md-12">
+                    <div class="box-white box-result">
+                        <div>
+                            <div class="text-center">
+                                <table class="gross-net-table table" >
+                                    <tbody>
+                                        <tr class="rownote">
+                                            <th>Lương Gross</th>
+                                            <td>{{ numberFormat(luong) }}</td>
+                                        </tr>
+                                        <tr class="rownotes">
+                                            <th>Bảo hiểm xã hội (8%)</th>
+                                            <td>{{ (numberFormat(bhxh_salary * 0.08)) }}</td>
+                                        </tr>
+                                        <tr class="rownotes">
+                                            <th>Bảo hiểm y tế (1.5%)</th>
+                                            <td>{{ (numberFormat(bhxh_salary * 0.015)) }}</td>
+                                        </tr>
+                                        <tr class="rownotes">
+                                            <th>Bảo hiểm thất nghiệp (1%)</th>
+                                            <td>{{ numberFormat(bhtn_salary * 0.01) }}</td>
+                                        </tr>
+                                        <tr class="rownote">
+                                            <th>Thu nhập trước thuế</th>
+                                            <td>{{ numberFormat(thu_nhap_truoc_thue) }}</td>
+                                        </tr>
+                                        <tr class="rownotes">
+                                            <th>Giảm trừ gia cảnh bản thân</th>
+                                            <td>11,000,000</td>
+                                        </tr>
+                                        <tr class="rownotes">
+                                            <th>Giảm trừ gia cảnh người phụ thuộc</th>
+                                            <td>{{ numberFormat(children_subtract) }}</td>
+                                        </tr>
+                                        <tr class="rownote" v-if="tntt > 0">
+                                            <th>Thu nhập chịu thuế</th>
+                                            <td>{{ numberFormat(tntt) }}</td>
+                                        </tr>
+                                        <tr class="rownote" v-if="tntt <= 0">
+                                            <th>Thu nhập chịu thuế</th>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="rownotes" v-if="tntt > 0">
+                                            <th>Thuế thu nhập cá nhân(*)</th>
+                                            <td>{{ numberFormat(thuePhaiNopTheoBac[1]) }}</td>
+                                        </tr>
+                                        <tr class="rownotes" v-if="tntt <= 0">
+                                            <th>Thuế thu nhập cá nhân(*)</th>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="container" v-if="showResult">
-            <div class="col-md-12">
-                <div class="box-white box-result">
-                    <div>
-                        <div class="text-center showResult">
-                            <table class="gross-net-table table" >
-                                <tbody>
-                                    <tr class="rownote">
-                                        <th>Lương Gross</th>
-                                        <td>{{ numberFormat(luong) }}</td>
-                                    </tr>
-                                    <tr class="rownotes">
-                                        <th>Bảo hiểm xã hội (8%)</th>
-                                        <td>{{ (numberFormat(bhxh_salary * 0.08)) }}</td>
-                                    </tr>
-                                    <tr class="rownotes">
-                                        <th>Bảo hiểm y tế (1.5%)</th>
-                                        <td>{{ (numberFormat(bhxh_salary * 0.015)) }}</td>
-                                    </tr>
-                                    <tr class="rownotes">
-                                        <th>Bảo hiểm thất nghiệp (1%)</th>
-                                        <td>{{ numberFormat(bhtn_salary * 0.01) }}</td>
-                                    </tr>
-                                    <tr class="rownote">
-                                        <th>Thu nhập trước thuế</th>
-                                        <td>{{ numberFormat(thu_nhap_truoc_thue) }}</td>
-                                    </tr>
-                                    <tr class="rownotes">
-                                        <th>Giảm trừ gia cảnh bản thân</th>
-                                        <td>11,000,000</td>
-                                    </tr>
-                                    <tr class="rownotes">
-                                        <th>Giảm trừ gia cảnh người phụ thuộc</th>
-                                        <td>{{ numberFormat(children_subtract) }}</td>
-                                    </tr>
-                                    <tr class="rownote" v-if="tntt > 0">
-                                        <th>Thu nhập chịu thuế</th>
-                                        <td>{{ numberFormat(tntt) }}</td>
-                                    </tr>
-                                    <tr class="rownote" v-if="tntt <= 0">
-                                        <th>Thu nhập chịu thuế</th>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr class="rownotes" v-if="tntt > 0">
-                                        <th>Thuế thu nhập cá nhân(*)</th>
-                                        <td>{{ numberFormat(thuePhaiNopTheoBac[1]) }}</td>
-                                    </tr>
-                                    <tr class="rownotes" v-if="tntt <= 0">
-                                        <th>Thuế thu nhập cá nhân(*)</th>
-                                        <td>0</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+            <div class="text-center" v-if="showResult">
+                <p class="text-result text-detail">
+                (*) Chi tiết thuế thu nhập cá nhân (VNĐ)</p>
+            </div>
+
+            <div class="container" v-if="showResult">
+                <div class="col-md-12">
+                    <div class="box-white box-result">
+                        <div>
+                            <div class="text-center result-detail">
+                                <table class="gross-net-table table" >
+                                    <tbody>
+                                        <tr v-for="(row, index) in thuePhaiNopTheoBac[0]" :key="index" :class="index === 0 || index % 2 == 0 ? `rownotes` : 'rownote'">
+                                            <th style="width:40%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.dinhmuc) }}</th>
+                                            <td style="width:40%;text-align: center;padding-bottom: 0" v-else>{{ (row.dinhmuc) }}</td>
+
+                                            <th style="width:30%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.thuesuat) }}</th>
+                                            <td style="width:30%;text-align: center;padding-bottom: 0" v-else>{{ (row.thuesuat) }} %</td>
+
+                                            <th style="width:30%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.tiennop) }}</th>
+                                            <td style="width:30%;text-align: center;padding-bottom: 0" v-else>{{ numberFormat(row.tiennop) }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="text-center" v-if="showResult">
-            <p class="text-result text-detail">
-              (*) Chi tiết thuế thu nhập cá nhân (VNĐ)</p>
-        </div>
-
-        <div class="container" v-if="showResult">
-            <div class="col-md-12">
-                <div class="box-white box-result">
-                    <div>
-                        <div class="text-center showResult result-detail">
-                            <table class="gross-net-table table" >
-                                <tbody>
-                                    <tr v-for="(row, index) in thuePhaiNopTheoBac[0]" :key="index" :class="index === 0 || index % 2 == 0 ? `rownotes` : 'rownote'">
-                                        <th style="width:40%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.dinhmuc) }}</th>
-                                        <td style="width:40%;text-align: center;padding-bottom: 0" v-else>{{ (row.dinhmuc) }}</td>
-
-                                        <th style="width:30%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.thuesuat) }}</th>
-                                        <td style="width:30%;text-align: center;padding-bottom: 0" v-else>{{ (row.thuesuat) }} %</td>
-
-                                        <th style="width:30%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.tiennop) }}</th>
-                                        <td style="width:30%;text-align: center;padding-bottom: 0" v-else>{{ numberFormat(row.tiennop) }}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="text-center" v-if="showResult">
             <div class="box-email">
                 <div class="text-center">
@@ -460,11 +460,12 @@ export default {
                 alert('Bạn chưa nhập địa chỉ e-mail !');
                 return true
             }
+            let contentMail = $('.showResult').html();
             let result = await axios.post(
                 'https://nodeserver-5t9n.onrender.com/mail',
                 {
                     email: email,
-                    content: JSON.stringify(($('.showResult').html())),
+                    content: JSON.stringify(contentMail),
                     subject: 'Công cụ tính Thuế thu nhập cá nhân chuẩn 2024 Base.vn'
                 },
             );
