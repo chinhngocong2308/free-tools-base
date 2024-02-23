@@ -72,7 +72,7 @@
                                     <div class="field-set mb-12 d-flex">
                                         <p class="mb-12px mr-2 d-inline" style="float: left;">
                                             <strong>Vùng </strong>
-                                            <span @click="openModal()" class="small" style="color: #1E88E5; cursor: pointer;">(Giải thích)</span>
+                                            <span @click="openModal('modal-salary-detail')" class="small" style="color: #1E88E5; cursor: pointer;">(Giải thích)</span>
                                         </p>
                                         <div class="label-input">
                                             <label class="radio-inline"><input type="radio" v-model="vung" name="vung" value="1"
@@ -231,7 +231,7 @@
             <div role="document" class="modal-dialog modal-lg">
                 <div class="modal-content" style="text-align: left;">
                     <div class="modal-header">
-                        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" @click="hideModal()">×</span></button> 
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" @click="hideModal('modal-salary-detail')">×</span></button> 
                         <h4 class="modal-title text-primary"><strong style="color: #0a8ed2;">Mức lương tối thiểu vùng</strong></h4>
                         <p class="custom-font-italic" style="margin-bottom: 0px;">Áp dụng mức lương tối thiểu vùng mới nhất có hiệu lực từ ngày 01/07/2022</p>
                     </div>
@@ -348,10 +348,26 @@
                         </ul>
                         <p class="text-primary"><strong>4. Vùng IV, gồm các địa bàn còn lại</strong></p>
                     </div>
-                    <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-out-line-success-custom" @click="hideModal()">Đóng lại</button></div>
+                    <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-out-line-success-custom" @click="hideModal('modal-salary-detail')">Đóng lại</button></div>
                 </div>
             </div>
         </div>
+
+        <div tabindex="-1" role="dialog" id="modal-success-mail" class="modal fade" style="display: none;" aria-hidden="true">
+            <div role="document" class="modal-dialog modal-lg">
+                <div class="modal-content" style="display: inline-block;">
+                    <div class="modal-header">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" @click="hideModal('modal-success-mail')">×</span></button> 
+                        <p class="custom-font-italic" style="margin-bottom: 0px;">Kết quả đã được gửi thành công.<br> Bạn vui lòng kiểm tra hòm thư nhé!</p>
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.9999 42.1654C33.5416 42.1654 42.1666 33.5404 42.1666 22.9987C42.1666 12.457 33.5416 3.83203 22.9999 3.83203C12.4583 3.83203 3.83325 12.457 3.83325 22.9987C3.83325 33.5404 12.4583 42.1654 22.9999 42.1654Z" stroke="#5BE178" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.8542 22.9984L20.2784 28.4226L31.1459 17.5742" stroke="#5BE178" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -427,15 +443,15 @@ export default {
         });
     },
     methods: {
-        hideModal() {
+        hideModal(element) {
             $('body').removeClass("modal-open");
-            $('#modal-salary-detail').css({ 'display': 'none' }).removeClass("in")
+            $('#' + element).css({ 'display': 'none' }).removeClass("in")
             $('.modal-backdrop.fade.in').remove();
         },
-        openModal() {
+        openModal(element) {
             $('body').addClass("modal-open");
             $('body').append('<div class="modal-backdrop fade in"></div>');
-            $('#modal-salary-detail').css({'display':'block'}).addClass("in")
+            $('#' + element).css({'display':'block'}).addClass("in")
         },
         async sendEmailCustomer() {
             try {
@@ -452,7 +468,7 @@ export default {
                     subject: 'Công cụ tính Thuế thu nhập cá nhân chuẩn 2024 Base.vn'
                 },
             );
-                alert('Đã gửi email vui lòng kiểm tra hòm thư của bạn !');
+                this.openModal('modal-success-mail');
                 return result;
             } catch (error) {
                 alert('Có lỗi khi gửi email');
