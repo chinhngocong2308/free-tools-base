@@ -219,7 +219,7 @@
                     <form>
                         <input id="useremail"  type="email" placeholder="Nhập địa chỉ Email" class="input-subscribe" v-model="emailCustomer"
                                     @keyup.enter="sendEmailCustomer" required/> 
-                        <input id="submit" type="submit" @click="sendEmailCustomer" value="Nhận ngay">
+                        <input id="submit" type="button" onclick="" @click="sendEmailCustomer" value="Nhận ngay">
                         <span class="submit"></span>
                     </form>
 

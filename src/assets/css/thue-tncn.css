@@ -3842,7 +3842,7 @@ a {
     padding-right: 15px;
     height: 58px;
 }
-.box-email input[type="submit"] {
+.box-email input[type="button"] {
     border-radius: 8px;
     padding-right: 15px;
     height: 58px;
@@ -3854,7 +3854,7 @@ a {
     width: 50%;
   }
   
-.box-email input[type="submit"] {
+.box-email input[type="button"] {
     background-color: #1E88E5;
     border: 1.5px solid #1E88E5;
     color: white;
