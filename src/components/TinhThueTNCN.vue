@@ -69,28 +69,30 @@
                                     </div>
 
                                     <div class="input-salary mb-12px d-grid">
-                                        <p class="mb-12px mr-2 d-inline" style="float: left;">
-                                            <strong>Vùng: </strong>
-                                            <span @click="openModal()" class="small" style="color: red; cursor: pointer;">(Giải thích)</span>
-                                        </p>
-                                        <div class="label-input">
-                                            <label class="radio-inline"><input type="radio" v-model="vung" name="vung" value="1"
-                                                    checked="checked" /> I
-                                                <span class="icon-radio"></span></label>
-                                            <label class="radio-inline"><input type="radio" v-model="vung" name="vung"
-                                                    value="2" /> II
-                                                <span class="icon-radio"></span></label>
-                                            <label class="radio-inline"><input type="radio" v-model="vung" name="vung"
-                                                    value="3" /> III
-                                                <span class="icon-radio"></span></label>
-                                            <label class="radio-inline"><input type="radio" v-model="vung" name="vung"
-                                                    value="4" /> IV
-                                                <span class="icon-radio"></span></label>
+                                        <div class="field-set mb-12 d-flex">
+                                            <p class="mb-12px mr-2 d-inline" style="float: left;">
+                                                <strong>Vùng </strong>
+                                                <span @click="openModal()" class="small" style="color: #1E88E5; cursor: pointer;">(Giải thích)</span>
+                                            </p>
+                                            <div class="label-input">
+                                                <label class="radio-inline"><input type="radio" v-model="vung" name="vung" value="1"
+                                                        checked="checked" /> I
+                                                    <span class="icon-radio"></span></label>
+                                                <label class="radio-inline"><input type="radio" v-model="vung" name="vung"
+                                                        value="2" /> II
+                                                    <span class="icon-radio"></span></label>
+                                                <label class="radio-inline"><input type="radio" v-model="vung" name="vung"
+                                                        value="3" /> III
+                                                    <span class="icon-radio"></span></label>
+                                                <label class="radio-inline"><input type="radio" v-model="vung" name="vung"
+                                                        value="4" /> IV
+                                                    <span class="icon-radio"></span></label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="input-salary mb-12px d-grid">
+                                    <div class="input-salary mb-12px d-grid" style="margin-top: -9px;margin-bottom: 48px;">
                                         <div class="field-set mb-12">
-                                            <label for="" class="mb-12px other">Số người phụ thuộc</label>
+                                            <label for="" class="label-text mb-12px other">Số người phụ thuộc</label>
                                             <div class="input-data">
                                                 <span class="icon"><i class="fa-solid fa-user-group-base"></i></span>
                                                 <input v-model="nguoiPhuThuoc" type="text" name="nguoiPhuThuoc" value=""

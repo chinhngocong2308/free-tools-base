@@ -65,7 +65,7 @@ a {
     z-index: 5;
 }
 .form-input-salary {
-    padding: 8px 5px;
+    padding: 8px 0px 8px 5px;
 }
 #personal-income-tax .radio-salary {
     align-items: center;
@@ -187,16 +187,19 @@ a {
 
 #personal-income-tax .btn-success-custom {
     background: #1e88e5;
-    border-radius: 3px;
+    border-radius: 8px;
     color: #fff;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 700;
     text-decoration: none;
-    line-height: 24px;
-    margin-right: 10px;
-    padding: 8px 24px
+    line-height: 23.44px;
+    margin: 0;
+    width: 100%;
+    padding: 12px 24px
 }
-
+#personal-income-tax .btn {
+    height: 51px;
+}
 #personal-income-tax .btn-success-custom:hover {
     background-color: #006cc5;
     color: #fff;
@@ -3394,7 +3397,7 @@ figure.image.image-style-align-right {
     box-shadow: -1px 1px 6px rgba(0, 0, 0, .05);
     margin-bottom: 16px;
     overflow: hidden;
-    padding: 50px 66px;
+    padding: 50px 66px 38px 66px;
     width: 100%;
     position: relative;
     box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
@@ -3864,11 +3867,14 @@ input.border-hover[disabled]:hover {
 }
 
 .box-white p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6em;
     text-align: justify
 }
 
+.input-salary .label-input {
+    width: 63.5%;
+}
 div input[type=radio] {
     display: none
 }
@@ -3891,7 +3897,7 @@ div .radio-inline {
     display: inline-flex;
     padding-left: 24px;
     position: relative;
-    margin-right: 15px;
+    margin-right: 34px;
 }
 
 div input[type=radio]:checked~.icon-radio {
