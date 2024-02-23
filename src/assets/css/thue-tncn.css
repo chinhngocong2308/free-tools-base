@@ -149,7 +149,12 @@ a {
 #personal-income-tax .table>tfoot>tr>th,
 #personal-income-tax .table>thead>tr>td,
 #personal-income-tax .table>thead>tr>th {
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #f8f8f8;
+    border-top: 1px solid #f8f8f8;
+    line-height: 42px;
+    position: relative;
+    z-index: 5;
+    min-width: 100px;
 }
 
 #personal-income-tax .box-gray.box--description .description--icon {
@@ -3386,16 +3391,27 @@ figure.image.image-style-align-right {
     padding: 16px 0
 }
 .text-email::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f0e0";
-    margin: 8px;
+    width: 23px;
+    content: "";
+    background-image: url(/src/assets/icon/sms.svg);    
+    position: absolute;
+    left: -31px;
+    top: 0px;
+    height: 22px;
 }
-
+.text-email {
+    margin-bottom: 17px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #1e88e5;
+    position: relative;
+    display: inline-block;
+}
 .box-white {
     background: #fff;
     border-radius: 12px;
     box-shadow: -1px 1px 6px rgba(0, 0, 0, .05);
-    margin-bottom: 16px;
     overflow: hidden;
     padding: 50px 66px 38px 66px;
     width: 100%;
@@ -3403,10 +3419,10 @@ figure.image.image-style-align-right {
     box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
-
-
 }
-
+.text-center.showResult {
+    margin-top: 32px;
+}
 .box-white .title {
     color: #1e88e5
 }
@@ -3613,6 +3629,16 @@ a {
     border-color: transparent;
     outline: none
 }
+.text-result {
+    margin-top: 138px;
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 27px;
+    color: #272727;
+    
+}
 
 .input-data .caption {
     margin-left: auto
@@ -3747,18 +3773,109 @@ a {
 .submit-email {
     margin: 0 25px
 }
-.gross-net-table td,.gross-net-table th {
+.gross-net-table td {
     text-align: right;
 }
-
-.rownote {
-    background-color: #ededed
+.gross-net-table th {
+    text-align: left;
+}
+.box-white.box-result {
+    padding: 0;
+    padding-bottom: 10px;
+}
+.box-white.box-result .text-center {
+    padding: 0 60px;
+}
+.box-white.box-result .result-detail {
+    padding: 0 60px;
+    margin-top: 0px;
+}
+.rownote,
+.rownotes {
+    font-size: 16px;
+    position: relative;
+}
+.rownote th {
+    width: 100%;
+}
+.rownote::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    background-image: url(/src/assets/image/Rectangle_34624312.jpg);    
+    top: 0;
+    left: 0;
+    width: 116%;
+    height: 59px;
+    margin-left: -65px
 }
 
+.rownotes::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    border-top: 1px solid transparent;    
+    top: 0;
+    left: 0;
+    width: 116%;
+    height: 59px;
+    margin-left: -65px
+}
+.text-result.text-detail {
+    margin-top: 80px;
+}
 .modal-body strong {
     color: #1e88e5
 }
-
+.box-email {
+    margin: 85px auto;
+    width: 60%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+}
+.box-email input[type="email"] {
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 58px;
+}
+.box-email input[type="submit"] {
+    border-radius: 8px;
+    padding-right: 15px;
+    height: 58px;
+}
+.box-email input[type="email"]{
+    background-color: #fff;
+    border: 1.5px solid #0085F2;
+    color: #0085F2;
+    width: 50%;
+  }
+  
+.box-email input[type="submit"] {
+    background-color: #1E88E5;
+    border: 1.5px solid #1E88E5;
+    color: white;
+    margin-left: -80px;
+    border-radius: 8px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23.44px;
+}
+span.submit {
+    position: relative;
+}
+span.submit::after {
+    width: 28px;
+    content: "";
+    background-image: url(/src/assets/icon/arrow-right.svg);
+    position: absolute;
+    left: -50px;
+    top: -6px;
+    height: 22px;
+}
 .mb-1 {
     margin-bottom: 6px
 }
