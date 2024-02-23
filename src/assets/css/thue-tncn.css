@@ -48,8 +48,6 @@ a {
     letter-spacing: -0.5px;
 }
 #personal-income-tax .input-data {
-    min-width: unset;
-    width: 63.5%;
     position: relative;
 }
 .input-data{
@@ -3961,6 +3959,7 @@ input.border-hover[disabled]:hover {
     margin: 0;
     margin-top: 21px;
 }
+
 #personal-income-tax .input-data.salary-input {
     width: 100%;
 }
@@ -3971,6 +3970,7 @@ input.border-hover[disabled]:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .salary-input-block {
     width: 63.5%;
@@ -4095,7 +4095,10 @@ div input[type=radio]~.icon-radio:after {
     width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-
+    #personal-income-tax .input-data {
+        width: 63.5%;
+        min-width: unset;
+    }
 }
 
 @media (min-width: 768px) {
