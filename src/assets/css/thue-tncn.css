@@ -3622,7 +3622,7 @@ a {
     color: #656565;
     font-size: 15px;
     font-style: normal;
-    margin-right: -18px;
+    margin-right: -15px;
     font-weight: 500;
     line-height: unset;
     z-index: 2;
@@ -3643,7 +3643,7 @@ a {
     color: #656565;
     font-size: 15px;
     font-style: normal;
-    margin-right: -18px;
+    margin-right: -15px;
     font-weight: 500;
     line-height: unset;
     z-index: 2;
@@ -3656,6 +3656,7 @@ a {
     top: 6px;
     z-index: 1;
 }
+
 .salary-input-block .input-data .border-hover:hover {
     border: unset !important;
     padding-bottom: 0px;
@@ -3807,7 +3808,9 @@ a {
 .rowdefault > th {
     font-weight: normal;
 }
-
+input.border-hover {
+    background: unset!important;
+}
 input.border-hover[disabled],
 input.border-hover[disabled]:hover {
     border: 1px solid transparent !important
