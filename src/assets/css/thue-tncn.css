@@ -42,11 +42,31 @@ a {
     line-height: 30px;
     margin-top: 0
 }
-
-#personal-income-tax .input-data {
-    min-width: 280px;
+.form-salary {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.5px;
 }
-
+#personal-income-tax .input-data {
+    min-width: unset;
+    width: 63.5%;
+    position: relative;
+}
+.input-data{
+    position: relative;
+}
+.input-data::before {
+    position: absolute;
+    border-bottom: 1px solid #D9D9D9;
+    content: "";
+    width: 100%;
+    top: 42px;
+    left: 0;
+    z-index: 5;
+}
+.form-input-salary {
+    padding: 8px 5px;
+}
 #personal-income-tax .radio-salary {
     align-items: center;
     color: #212f3f;
@@ -57,8 +77,8 @@ a {
     font-weight: 400;
     line-height: 20px;
     margin-left: 0;
-    padding-bottom: 8px;
-    padding-top: 8px
+    padding-bottom: 10px;
+    padding-top: 7px;
 }
 
 #personal-income-tax .btn-custom {
@@ -3560,7 +3580,7 @@ a {
 .input-data {
     align-items: center;
     background: #fff;
-    border: 1px solid #eee;
+    border: unset !important;
     border-radius: 3px;
     box-sizing: border-box;
     display: flex;
@@ -3571,15 +3591,15 @@ a {
 }
 
 .input-data input {
-    border: 1px solid transparent;
+    border: unset;
     border-radius: 3px;
     height: 100%;
     left: 0;
     position: absolute;
-    padding-left: 40px;
+    padding-left: 32px;
     padding-right: 60px;
     width: 100%;
-    text-align: right;
+    text-align: left;
 }
 
 .input-data input:focus {
@@ -3594,17 +3614,79 @@ a {
 .input-data .caption {
     margin-left: auto
 }
-
+.salary-input-block .input-data .caption,
+.input-data .icon {
+    color: #656565;
+    font-size: 15px;
+    font-style: normal;
+    margin-right: -18px;
+    font-weight: 500;
+    line-height: unset;
+    z-index: 2;
+    margin-bottom: -28px;
+    
+}
+.fa-user-group-base::before {
+    width: 22px;
+    content: "";
+    background-image: url(/src/assets/icon/profile-2user.svg);    
+    position: absolute;
+    left: 0px;
+    top: 16px;
+    height: 22px;
+}
 .input-data .caption,
 .input-data .icon {
-    color: #ccc;
-    font-size: 12px;
+    color: #656565;
+    font-size: 15px;
     font-style: normal;
+    margin-right: -18px;
     font-weight: 500;
-    line-height: 16px;
-    z-index: 2
+    line-height: unset;
+    z-index: 2;
+    margin-bottom: -15px;
 }
-
+.input-data .border-hover:hover {
+    border: unset !important;
+    padding-bottom: 0px;
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+}
+.salary-input-block .input-data .border-hover:hover {
+    border: unset !important;
+    padding-bottom: 0px;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+}
+.salary-input-block .input-data .border-hover {
+    border: unset !important;
+    padding-bottom: 0px;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+}
+.input-data .border-hover{
+    padding-bottom: 0px;
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+}
+.input-data input:focus,
+.input-data input:hover,
+.input-data input:active{
+    border: unset;
+}
+.fa-money-bill-base::before {
+    width: 22px;
+    content: "";
+    background-image: url(/src/assets/icon/dollar-circle.svg);
+    position: absolute;
+    left: 0px;
+    top: 16px;
+    height: 22px;
+}
 .input-data .icon {
     color: #1e88e5
 }
@@ -3749,11 +3831,29 @@ input.border-hover[disabled]:hover {
     margin-right: 16px;
     font-weight: bold;
 }
-
+.field-set .label-text {
+    margin: 0;
+    margin-top: 21px;
+}
+#personal-income-tax .input-data.salary-input {
+    width: 100%;
+}
+.input-salary.salary-options {
+    margin-top: 15px;
+}
+.field-set{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.salary-input-block {
+    width: 63.5%;
+    margin-top: 15px;
+}
 .info-rule {
     border-bottom: 1px solid;
     border-color: rgba(207, 207, 207, 1);
-    padding-bottom: 10px;
+    padding-bottom: 3px;
 }
 .items-center {
     align-items: center

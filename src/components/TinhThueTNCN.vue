@@ -42,25 +42,29 @@
                                 <span class="number-yellow"> 4,400,000đ </span>
                             </div>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex form-input-salary">
                             <div class="w-100">
                                 <form action="" id="form-salary" class="form-salary">
                                     <div class="input-salary mb-12px d-grid">
-                                        <div class="mr-auto mb-12 d-grid">
-                                            <label for="" class="mb-12px other">Thu Nhập (Gross)</label>
+                                        <div class="field-set mb-12">
+                                            <label for="" class="label-text mb-12px other">Thu Nhập (Gross)</label>
                                             <div class="input-data">
-                                                <span class="icon"><i class="fa-solid fa-money-bill"></i></span>
+                                                <span class="icon"><i class="fa-solid fa-money-bill-base"></i></span>
                                                 <input type="text" v-model="luong" name="luong" value=""
-                                                    placeholder="VD: 10,000,000" class="border-hover 1236il9bpn" />
+                                                    placeholder="10,000,000" class="border-hover 1236il9bpn" />
                                                 <span class="caption">VND</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="input-salary mb-12px d-grid">
-                                        <div class="mr-auto mb-8 d-grid">
-                                            <label for="" style="display: flex" class="mb-12px other">Mức lương đóng bảo hiểm</label> <label class="radio-inline mb-0 radio-salary"><input v-model="dongBaoHiem" type="radio" name="dongBaoHiem" value="trenChinhThuc" checked="checked"> <span>Trên lương chính thức</span> <span class="icon-radio"></span></label> <label class="radio-inline other radio-salary"><input type="radio" v-model="dongBaoHiem" name="dongBaoHiem" value="khac"> <span class="icon-radio"></span> <span>Khác</span></label> 
-                                            <div class="input-data"><span class="icon text-muted"><i class="fa-solid fa-money-bill"></i></span> <input type="text"  v-model="luongDongBaoHiem" name="luongDongBaoHiem" disabled="disabled" class="border-hover 1236il9bpn"> <span class="caption">VND</span></div>
+                                    <div class="input-salary salary-options mb-12px d-grid">
+                                        <div class="field-set mb-12 d-flex">
+                                            <label for="" style="display: flex" class="label-text mb-12px other">Mức lương đóng bảo hiểm</label>
+                                            <div class="salary-input-block">
+                                                <label class="radio-inline mb-0 radio-salary"><input v-model="dongBaoHiem" type="radio" name="dongBaoHiem" value="trenChinhThuc" checked="checked"> <span>Trên lương chính thức</span> <span class="icon-radio"></span></label> <label class="radio-inline other radio-salary">
+                                                    <input type="radio" v-model="dongBaoHiem" name="dongBaoHiem" value="khac"> <span class="icon-radio"></span> <span>Khác</span></label> 
+                                                <div class="input-data salary-input"><span class="icon text-muted"><i class="fa-solid fa-money-bill-base"></i></span> <input type="text"  v-model="luongDongBaoHiem" name="luongDongBaoHiem" disabled="disabled" class="border-hover 1236il9bpn"> <span class="caption">VND</span></div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -85,10 +89,10 @@
                                         </div>
                                     </div>
                                     <div class="input-salary mb-12px d-grid">
-                                        <div class="mr-auto mb-12 d-grid">
+                                        <div class="field-set mb-12">
                                             <label for="" class="mb-12px other">Số người phụ thuộc</label>
                                             <div class="input-data">
-                                                <span class="icon"><i class="fa-solid fa-user-group"></i></span>
+                                                <span class="icon"><i class="fa-solid fa-user-group-base"></i></span>
                                                 <input v-model="nguoiPhuThuoc" type="text" name="nguoiPhuThuoc" value=""
                                                     placeholder="0" class="border-hover" />
                                                 <span class="caption">Người</span>
