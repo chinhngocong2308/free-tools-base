@@ -3870,11 +3870,12 @@ a {
     border: 1.5px solid #1E88E5;
     color: white;
     margin-left: -80px;
-    border-radius: 8px;
+	border-radius: 0 8px 8px 0; /*TL TR BR BL*/
     width: 200px;
     font-size: 20px;
     font-weight: 500;
     line-height: 23.44px;
+    height: 59px;
 }
 span.submit {
     position: relative;
