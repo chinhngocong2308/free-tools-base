@@ -194,15 +194,15 @@
                         <div class="text-center showResult result-detail">
                             <table class="gross-net-table table" >
                                 <tbody>
-                                    <tr v-for="(row, index) in thuePhaiNopTheoBac[0]" :key="index" :class="index === 0 ? `rownotes` : 'rownote'">
-                                        <th style="width:33%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.dinhmuc) }}</th>
-                                        <td style="width:33%;text-align: center;padding-bottom: 0" v-else>{{ (row.dinhmuc) }}</td>
+                                    <tr v-for="(row, index) in thuePhaiNopTheoBac[0]" :key="index" :class="index === 0 || index % 2 == 0 ? `rownotes` : 'rownote'">
+                                        <th style="width:40%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.dinhmuc) }}</th>
+                                        <td style="width:40%;text-align: center;padding-bottom: 0" v-else>{{ (row.dinhmuc) }}</td>
 
-                                        <th style="width:33%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.thuesuat) }}</th>
-                                        <td style="width:33%;text-align: center;padding-bottom: 0" v-else>{{ (row.thuesuat) }} %</td>
+                                        <th style="width:30%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.thuesuat) }}</th>
+                                        <td style="width:30%;text-align: center;padding-bottom: 0" v-else>{{ (row.thuesuat) }} %</td>
 
-                                        <th style="width:33%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.tiennop) }}</th>
-                                        <td style="width:33%;text-align: center;padding-bottom: 0" v-else>{{ numberFormat(row.tiennop) }}</td>
+                                        <th style="width:30%;text-align: center;padding-bottom: 0" v-if="index === 0">{{ (row.tiennop) }}</th>
+                                        <td style="width:30%;text-align: center;padding-bottom: 0" v-else>{{ numberFormat(row.tiennop) }}</td>
                                     </tr>
                                 </tbody>
                             </table>
