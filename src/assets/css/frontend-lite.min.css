@@ -1483,7 +1483,8 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
     flex-basis: auto;
     flex-grow: 1;
     flex-shrink: 1;
-    align-self: auto
+    align-self: auto;
+    padding-bottom: 26px;
 }
 
 .e-con.e-grid>.e-con-inner {
@@ -6441,10 +6442,12 @@ body:not(.rtl) .elementor-104 .elementor-element.elementor-element-9eaa3dc .elem
 }
 
 .elementor-374 .elementor-element.elementor-element-1ece82a:not(.elementor-motion-effects-element-type-background), .elementor-374 .elementor-element.elementor-element-1ece82a > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-    background-color: #F1F7FF;
-    min-height: 830px;
+    background-color: unset;
+    /* min-height: 830px; */
 }
-
+body {
+    background: linear-gradient(0deg, #fff 35%, #F1F7FF 65%);
+}
 .elementor-374 .elementor-element.elementor-element-1ece82a, .elementor-374 .elementor-element.elementor-element-1ece82a::before {
     --border-transition: 0.3s;
 }
@@ -6471,9 +6474,7 @@ p.elementor-widget-container {
     --align-self: center;
     padding: 0 20px;
 }
-.elementor-location-single {
-    position: relative;
-}
+
 .elementor-374 .elementor-element.elementor-element-3f2f737 {
     font-family: "Roboto", Sans-serif;
     font-size: 14px;
@@ -6867,10 +6868,140 @@ body.rtl .elementor-374 .elementor-element.elementor-element-684a21c .elementor-
 
 @media(max-width: 767px) {
     .elementor-374 .elementor-element.elementor-element-63f16a8 .elementor-heading-title {
-        font-size:34px;
-        line-height: 40px;
+        font-size:40px;
+        line-height: 47px;
+        font-weight: 700px;
+        letter-spacing: -1.7px;
     }
-
+    .e-con>.elementor-widget>.elementor-widget-container p {
+        letter-spacing: -0.3px;
+        margin-top: -6px;
+    }
+    p.elementor-widget-container {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+    }
+    .elementor-374 .elementor-element.elementor-element-a658434.e-con {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .box-white { 
+        padding: 20px 24px;
+    }
+    #personal-income-tax .box--description .description {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        margin-bottom: 15px;
+    }
+    .elementor-374 .elementor-element.elementor-element-684a21c > .elementor-widget-container {
+        margin-top: -7px;
+        letter-spacing: -0.25px;
+    }
+    .info-rule {
+        border: unset;
+    }
+    .mb-12 {
+        margin-top: 0;
+    }
+    .d-flex.form-input-salary {
+        padding: 0;
+        margin-top: 15px;
+    }
+    #personal-income-tax .btn {
+        margin-top: 8px;
+    }
+    #personal-income-tax .input-data {
+        padding: 12px 16px 10px 16px;
+    }
+    .input-data {
+        padding-top: 12px;
+    }
+    .fa-money-bill-base::before {
+        top: 9px
+    }
+    .input-data::before {
+        top: 34px;
+    }
+    .rownote::before {
+        width: 134%;
+        margin-left: -63px;
+    }
+    .box-email {
+        width: 100%;
+    }
+    .box-email input[type="email"] {
+        width: 100%;
+    }
+    .box-email form {
+        padding: 0 15px;
+    }
+    .box-email input[type="button"] {
+        width: 100%;
+        margin: 15px 0 0 0;
+        border-radius: 8px 8px 8px 8px;
+    }
+    .salary-input-block .fa-money-bill-base::before {
+        top: 18px;
+    }
+    #personal-income-tax .radio-salary {
+        padding-bottom: 6px;
+    }
+    .field-set .label-text {
+        margin-top: 10px;
+    }
+    .input-salary .label-input {
+        width: 100%;
+    }
+    .fa-user-group-base::before {
+        top: 8px
+    }
+    div .radio-inline {
+        margin-right: 20px;
+    }
+    .salary-input-block .input-data::before {
+        top: 43px;
+    }
+    .input-salary {
+        margin-top: 0px;
+    }
+    .salary-input-block {
+        width: 100%;
+        margin-top: 6px;
+        margin-bottom: 12px;
+    }
+    .salary-input-block .input-data .caption {
+        margin-bottom: -29px;
+    }
+    .input-salary.salary-options {
+        margin-top: 10px;
+    }
+    #personal-income-tax .box-gray .title-block {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+    }
+    .info-rule {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .w-50 {
+        width: 100%;
+    }
+    #personal-income-tax .box-white .box-gray {
+        padding: 9px 12px 9px 6px;
+        margin-top: 13px;
+        margin-top: 0px;
+        margin-bottom: 3px;
+    }
+    .col-md-12 {
+        padding: 0;
+    }
     .elementor-374 .elementor-element.elementor-element-684a21c .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
         padding-bottom: calc(25px/2);
     }

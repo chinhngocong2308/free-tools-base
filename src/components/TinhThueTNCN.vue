@@ -5,19 +5,21 @@
                 <div class="elementor-element elementor-element-a658434 e-con-full e-flex e-con e-child">
                     <div class="elementor-element elementor-element-63f16a8 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading">
                         <div class="elementor-widget-container">
-                        <h1 class="elementor-heading-title elementor-size-default">Công cụ Tính <br><p style="color: #1E88E5;">Thuế thu nhập Cá nhân</p></h1>
+                            <h1 class="elementor-heading-title elementor-size-default desktop">Công cụ Tính <br><p style="color: #1E88E5;">Thuế thu nhập Cá nhân</p></h1>
+                            <h1 class="elementor-heading-title elementor-size-default mobile">Công cụ Tính <span style="color: #1E88E5;">Thuế thu nhập Cá nhân</span></h1>
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-684a21c elementor-mobile-align-left elementor-widget__width-inherit elementor-widget elementor-widget-post-info">
-                        <p class="elementor-widget-container">
-                            Với công cụ miễn phí này, việc tính thuế thu nhập cá nhân trở lên tiện lợi, chính xác và nhanh chóng hơn! Dễ dàng sử dụng và có thể tùy chỉnh linh hoặt theo sát thực tế.
+                        <p class="elementor-widget-container desktop">
+                            Với công cụ miễn phí này, việc tính thuế thu nhập cá nhân trở lên tiện lợi, chính xác và nhanh chóng hơn! Dễ dàng sử dụng và có thể tùy chỉnh linh hoạt theo sát thực tế.
+                        </p>
+                        <p class="elementor-widget-container mobile">
+                            Các công cụ hoàn toàn miễn phí của chúng tôi - tất cả đều được thiết kế để giúp bạn làm việc & quản trị tốt hơn mỗi ngày
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
     <div id="personal-income-tax">
         <!-- <div class="modal-backdrop fade"></div> -->
@@ -48,11 +50,13 @@
                                 <div class="input-salary mb-12px d-grid">
                                     <div class="field-set mb-12">
                                         <label for="" class="label-text mb-12px other">Thu Nhập (Gross)</label>
-                                        <div class="input-data">
-                                            <span class="icon"><i class="fa-solid fa-money-bill-base"></i></span>
-                                            <input type="text" v-model="luong" name="luong" value=""
-                                                placeholder="10,000,000" class="border-hover 1236il9bpn" />
-                                            <span class="caption">VND</span>
+                                        <div class="form-w-100">
+                                            <div class="input-data">
+                                                <span class="icon"><i class="fa-solid fa-money-bill-base"></i></span>
+                                                <input type="text" v-model="luong" name="luong" value=""
+                                                    placeholder="10,000,000" class="border-hover 1236il9bpn" />
+                                                <span class="caption">VND</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -90,14 +94,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="input-salary mb-12px d-grid" style="margin-top: -9px;margin-bottom: 48px;">
+                                <div class="input-salary mb-12px d-grid">
                                     <div class="field-set mb-12">
                                         <label for="" class="label-text mb-12px other">Số người phụ thuộc</label>
-                                        <div class="input-data">
-                                            <span class="icon"><i class="fa-solid fa-user-group-base"></i></span>
-                                            <input v-model="nguoiPhuThuoc" type="text" name="nguoiPhuThuoc" value=""
-                                                placeholder="0" class="border-hover" />
-                                            <span class="caption">Người</span>
+                                        <div class="form-w-100">
+                                            <div class="input-data">
+                                                <span class="icon"><i class="fa-solid fa-user-group-base"></i></span>
+                                                <input v-model="nguoiPhuThuoc" type="text" name="nguoiPhuThuoc" value=""
+                                                    placeholder="0" class="border-hover" />
+                                                <span class="caption">Người</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -359,10 +365,12 @@
                     <div class="modal-header">
                         <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" @click="hideModal('modal-success-mail')">×</span></button> 
                         <p class="custom-font-italic" style="margin-bottom: 0px;">Kết quả đã được gửi thành công.<br> Bạn vui lòng kiểm tra hòm thư nhé!</p>
-                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.9999 42.1654C33.5416 42.1654 42.1666 33.5404 42.1666 22.9987C42.1666 12.457 33.5416 3.83203 22.9999 3.83203C12.4583 3.83203 3.83325 12.457 3.83325 22.9987C3.83325 33.5404 12.4583 42.1654 22.9999 42.1654Z" stroke="#5BE178" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14.8542 22.9984L20.2784 28.4226L31.1459 17.5742" stroke="#5BE178" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <div class="icon-success">
+                            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9999 42.1654C33.5416 42.1654 42.1666 33.5404 42.1666 22.9987C42.1666 12.457 33.5416 3.83203 22.9999 3.83203C12.4583 3.83203 3.83325 12.457 3.83325 22.9987C3.83325 33.5404 12.4583 42.1654 22.9999 42.1654Z" stroke="#5BE178" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.8542 22.9984L20.2784 28.4226L31.1459 17.5742" stroke="#5BE178" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>

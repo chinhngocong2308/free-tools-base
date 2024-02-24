@@ -29,7 +29,7 @@ a {
     color: #42b983;
 }
 #personal-income-tax {
-    margin-top: -284px;
+    padding-bottom: 100px;
 }
 
 #personal-income-tax .title--header {
@@ -49,6 +49,9 @@ a {
 }
 #personal-income-tax .input-data {
     position: relative;
+    min-width: 300px;
+    width: 100%;
+    padding: 18px;
 }
 .input-data{
     position: relative;
@@ -202,6 +205,11 @@ a {
 }
 #personal-income-tax .btn {
     height: 51px;
+    margin-top: 30px;
+}
+.input-salary:last-child {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 #personal-income-tax .btn-success-custom:hover {
     background-color: #006cc5;
@@ -3653,7 +3661,7 @@ a {
     font-weight: 500;
     line-height: unset;
     z-index: 2;
-    margin-bottom: -28px;
+    margin-bottom: -15px;
     
 }
 .fa-user-group-base::before {
@@ -3785,11 +3793,14 @@ a {
     padding-bottom: 10px;
 }
 .box-white.box-result .text-center {
-    padding: 0 60px;
+    padding: 31px 60px 0 60px;
 }
 .box-white.box-result .result-detail {
     padding: 0 60px;
     margin-top: 0px;
+}
+.icon-success {
+    padding-bottom: 20px;
 }
 .rownote,
 .rownotes {
@@ -3873,7 +3884,7 @@ a {
 	border-radius: 0 8px 8px 0; /*TL TR BR BL*/
     width: 200px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 23.44px;
     height: 59px;
 }
@@ -3907,7 +3918,7 @@ span.submit::after {
 }
 
 .mb-12px {
-    margin-bottom: 12px
+    margin-bottom: 0
 }
 
 .mb-8 {
@@ -3970,6 +3981,8 @@ input.border-hover[disabled]:hover {
 .field-set .label-text {
     margin: 0;
     margin-top: 21px;
+    padding-right: 15px;
+    min-width: 210px;
 }
 
 #personal-income-tax .input-data.salary-input {
@@ -3985,7 +3998,7 @@ input.border-hover[disabled]:hover {
     flex-wrap: wrap;
 }
 .salary-input-block {
-    width: 63.5%;
+    width: 100%;
     margin-top: 15px;
 }
 .info-rule {
@@ -4106,16 +4119,36 @@ div input[type=radio]~.icon-radio:after {
 .w-100 {
     width: 100%;
 }
+#personal-income-tax .form-w-100 {
+    width: 100%;
+}
 @media only screen and (min-width: 1024px) {
-    #personal-income-tax .input-data {
+    #personal-income-tax .form-w-100,
+    #personal-income-tax .salary-input-block {
         width: 63.5%;
         min-width: unset;
     }
 }
 
-@media (min-width: 768px) {
-
+@media (max-width: 767px) {
+    .mobile {
+        display: block !important;
+    }
+    .desktop {
+        display: none !important;
+    }
+}
+@media (min-width: 767px) {
+    .desktop {
+        display: block !important;
+    }
+    .mobile {
+        display: none !important;
+    }
+    .salary-input-block .input-data .border-hover {
+        margin-top: -10px;
+    }
 }
 #welcome{
-    background-color: #F1F7FF;
+    background-color: unset;
 }
