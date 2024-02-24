@@ -6941,6 +6941,10 @@ body.rtl .elementor-374 .elementor-element.elementor-element-684a21c .elementor-
     .box-email form {
         padding: 0 15px;
     }
+    #personal-income-tax .input-data.salary-input {
+        margin-top: -12px;
+        margin-bottom: 17px;
+    }
     .box-email input[type="button"] {
         width: 100%;
         margin: 15px 0 0 0;
@@ -6957,12 +6961,13 @@ body.rtl .elementor-374 .elementor-element.elementor-element-684a21c .elementor-
     }
     .input-salary .label-input {
         width: 100%;
+        margin: 8px 0 15px 0;
     }
     .fa-user-group-base::before {
         top: 8px
     }
     div .radio-inline {
-        margin-right: 20px;
+        margin-right: 32px;
     }
     .salary-input-block .input-data::before {
         top: 43px;

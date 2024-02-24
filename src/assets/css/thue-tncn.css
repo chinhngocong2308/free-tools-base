@@ -72,6 +72,7 @@ a {
     align-items: center;
     color: #212f3f;
     display: flex;
+    z-index: 5;
     font-family: Roboto, Segoe UI, sans-serif;
     font-size: 15px;
     font-style: normal;
