@@ -3816,7 +3816,7 @@ a {
     content: "";
     z-index: 1;
     position: absolute;
-    background-image: url(/src/assets/image/Rectangle_34624312.jpg);    
+    background-color: rgba(248, 248, 248, 1);    
     top: 0;
     left: 0;
     width: 200%;
@@ -3829,9 +3829,13 @@ a {
     text-align: center;
     line-height: 29px;
 }
-#modal-success-mail .modal-dialog {
-    margin: 180px auto;
+#modal-success-mail .modal-dialog,
+#modal-loading .modal-dialog {
     padding: 0 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #app .modal-content {
     border-radius: 12px;

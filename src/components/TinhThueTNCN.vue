@@ -375,7 +375,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div tabindex="-1" role="dialog" id="modal-loading" class="modal fade" style="display: none;" aria-hidden="true">
             <div role="document" class="modal-dialog modal-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -506,6 +506,13 @@ export default {
         });
     },
     methods: {
+        validateEmail(mail){
+            let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (mail.match(validRegex)) {
+                return true
+            }
+            return false
+        },
         hideModal(element) {
             $('body').removeClass("modal-open");
             $('#' + element).css({ 'display': 'none' }).removeClass("in")
@@ -523,6 +530,10 @@ export default {
                 alert('Bạn chưa nhập địa chỉ e-mail !');
                 return true
             }
+            if(this.validateEmail(email)) {
+                alert('Địa chỉ email của bạn không hợp lệ!');
+                return true
+            }
             let contentMail = $('.showResult').html();
             this.openModal('modal-loading')
 
@@ -535,10 +546,14 @@ export default {
                 },
                 );
                 this.hideModal('modal-loading')
-
-                this.openModal('modal-success-mail');
+                if(result?.data?.message === 'success') {
+                    this.openModal('modal-success-mail');
+                } else {
+                    alert('Có lỗi khi gửi email');
+                }
                 return result;
             } catch (error) {
+                this.hideModal('modal-loading')
                 alert('Có lỗi khi gửi email');
             }
 
