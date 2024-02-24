@@ -3834,6 +3834,8 @@ a {
     padding: 0 15px;
     position: fixed;
     top: 50%;
+    width: 100%;
+    margin: 0;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -4150,10 +4152,6 @@ div input[type=radio]~.icon-radio:after {
 }
 @media (min-width: 767px) {
     .modal-body {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    .modal-header {
         padding-left: 40px;
         padding-right: 40px;
     }
