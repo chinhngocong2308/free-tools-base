@@ -6928,6 +6928,9 @@ body.rtl .elementor-374 .elementor-element.elementor-element-684a21c .elementor-
     .input-data::before {
         top: 34px;
     }
+    #modal-success-mail .custom-font-italic {
+        padding: 30px 15px 20px 15px;
+    }
     .text-result {
         font-size: 19px;
     }

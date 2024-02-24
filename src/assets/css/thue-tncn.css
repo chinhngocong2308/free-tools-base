@@ -3831,6 +3831,10 @@ a {
 }
 #modal-success-mail .modal-dialog {
     margin: 180px auto;
+    padding: 0 15px;
+}
+#app .modal-content {
+    border-radius: 12px;
 }
 #modal-success-mail .custom-font-italic{
     padding: 50px 50px 20px 50px;
@@ -4141,6 +4145,17 @@ div input[type=radio]~.icon-radio:after {
     }
 }
 @media (min-width: 767px) {
+    .modal-body {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .modal-header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .modal-body ul {
+        padding: 15px 0 0 15px;
+    }
     .desktop {
         display: block !important;
     }
