@@ -538,7 +538,7 @@ export default {
             this.openModal('modal-loading')
 
             let result = await axios.post(
-                'https://nodeserver-5t9n.onrender.com/mail',
+                'https://nodeserver-5t9n.onrender.com/mail/send',
                 {
                     email: email,
                     content: JSON.stringify(contentMail),
@@ -546,6 +546,13 @@ export default {
                 },
                 );
                 this.hideModal('modal-loading')
+                if(result?.data?.errors) {
+                    alert('Có lỗi khi gửi email');
+                }
+                if(result?.data?.errors === 'No recipients defined') {
+                    alert('Không tìm thấy địa chỉ email của bạn. Xin vui lòng kiểm tra lại!');
+                }
+
                 if(result?.data?.message === 'success') {
                     this.openModal('modal-success-mail');
                 } else {
