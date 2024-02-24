@@ -530,7 +530,7 @@ export default {
                 alert('Bạn chưa nhập địa chỉ e-mail !');
                 return true
             }
-            if(this.validateEmail(email)) {
+            if(!this.validateEmail(email)) {
                 alert('Địa chỉ email của bạn không hợp lệ!');
                 return true
             }
@@ -548,24 +548,24 @@ export default {
                 this.hideModal('modal-loading')
                 if(result?.data?.errors) {
                     alert('Có lỗi khi gửi email');
-                    return
+                    return true
                 }
                 if(result?.data?.errors === 'No recipients defined') {
                     alert('Không tìm thấy địa chỉ email của bạn. Xin vui lòng kiểm tra lại!');
-                    return
+                    return true
                 }
 
                 if(result?.data?.message === 'success') {
                     this.openModal('modal-success-mail');
                 } else {
                     alert('Có lỗi khi gửi email');
-                    return
+                    return true
                 }
                 return result;
             } catch (error) {
                 this.hideModal('modal-loading')
                 alert('Có lỗi khi gửi email');
-                return
+                return true
             }
 
         },
