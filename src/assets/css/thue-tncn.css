@@ -3641,6 +3641,7 @@ a {
 }
 .text-result {
     margin-top: 138px;
+    padding: 0 15px;
     font-size: 20px;
     line-height: 29px;
     font-weight: 500;
@@ -3818,7 +3819,7 @@ a {
     background-image: url(/src/assets/image/Rectangle_34624312.jpg);    
     top: 0;
     left: 0;
-    width: 116%;
+    width: 200%;
     height: 59px;
     margin-left: -65px
 }
@@ -3841,7 +3842,7 @@ a {
     border-top: 1px solid transparent;    
     top: 0;
     left: 0;
-    width: 116%;
+    width: 200%;
     height: 59px;
     margin-left: -65px
 }

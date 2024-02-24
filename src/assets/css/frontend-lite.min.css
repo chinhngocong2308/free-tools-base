@@ -6928,8 +6928,10 @@ body.rtl .elementor-374 .elementor-element.elementor-element-684a21c .elementor-
     .input-data::before {
         top: 34px;
     }
+    .text-result {
+        font-size: 19px;
+    }
     .rownote::before {
-        width: 134%;
         margin-left: -63px;
     }
     .box-email {
