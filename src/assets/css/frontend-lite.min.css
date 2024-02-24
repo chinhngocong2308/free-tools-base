@@ -6931,6 +6931,12 @@ body.rtl .elementor-374 .elementor-element.elementor-element-684a21c .elementor-
     .text-result {
         font-size: 19px;
     }
+    .box-white.box-result .result-detail {
+        padding: 0 0;
+    }
+    .box-white.box-result .text-center {
+        padding: 15px 15px 0 15px;
+    }
     .rownote::before {
         margin-left: -63px;
     }
