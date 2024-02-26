@@ -124,9 +124,9 @@
         <div class="showResult">
             <div class="text-center" v-if="showResult">
                 <p class="text-result">
-                    <b style="color: #1e88e5">Xin chào bạn!</b>
+                    Xin chào bạn!
                     <br> Cảm ơn bạn đã dùng công cụ này của Base.vn!<br>
-                    Với Dữ liệu đã cung cấp thì Số tiền Thuế TNCN là: {{ numberFormat(tax) }} đ</p>
+                    Với Dữ liệu đã cung cấp thì Số tiền Thuế TNCN là: <span style="color: #1e88e5"><b></b> {{ numberFormat(tax) }} đ<b></b></span></p>
             </div>
             <div class="container" v-if="showResult">
                 <div class="col-md-12">
@@ -173,11 +173,11 @@
                                         </tr>
                                         <tr class="rownotes" v-if="tntt > 0">
                                             <th>Thuế thu nhập cá nhân(*)</th>
-                                            <td>{{ numberFormat(thuePhaiNopTheoBac[1]) }}</td>
+                                            <td  style="color: #1e88e5">{{ numberFormat(thuePhaiNopTheoBac[1]) }}</td>
                                         </tr>
                                         <tr class="rownotes" v-if="tntt <= 0">
                                             <th>Thuế thu nhập cá nhân(*)</th>
-                                            <td>0</td>
+                                            <td  style="color: #1e88e5">0</td>
                                         </tr>
                                     </tbody>
                                 </table>
