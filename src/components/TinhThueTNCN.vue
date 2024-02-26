@@ -110,10 +110,10 @@
                             </form>
                             <div class="input-salary mb-12px w-100">
                                 <div class="d-flex mb-8">
-                                    <a href="#" id="btn-submit-tax" data-type="submitPersonalIncomeTax" class="btn btn-success-custom"
+                                    <div  id="btn-submit-tax" data-type="submitPersonalIncomeTax" class="btn btn-success-custom"
                                         @click="personalIncomeTax()">
                                         Tính thuế TNCN
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -752,7 +752,12 @@ export default {
 
             if(this.tntt) {
                 this.showResult = true;
-            } else {
+                $('.showResult')[0].scrollIntoView({
+                    behavior: "smooth", // or "auto" or "instant"
+                    block: "start" // or "end"
+                });
+                    
+                } else {
                 alert('Vui lòng nhập số người phụ thuộc.')
                 return
             }
