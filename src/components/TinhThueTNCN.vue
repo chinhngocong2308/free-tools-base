@@ -128,7 +128,6 @@
                     <br> Cảm ơn bạn đã dùng công cụ này của Base.vn!<br>
                     Với Dữ liệu đã cung cấp thì Số tiền Thuế TNCN là: {{ numberFormat(tax) }} đ</p>
             </div>
-
             <div class="container" v-if="showResult">
                 <div class="col-md-12">
                     <div class="box-white box-result">
@@ -752,10 +751,13 @@ export default {
 
             if(this.tntt) {
                 this.showResult = true;
-                $('.showResult')[0].scrollIntoView({
-                    behavior: "smooth", // or "auto" or "instant"
-                    block: "start" // or "end"
-                });
+                setTimeout(() => {
+                        $('.showResult')[0].scrollIntoView({
+                        behavior: "smooth", // or "auto" or "instant"
+                        block: "start" // or "end"
+                    });
+                }, 10);
+
                     
                 } else {
                 alert('Vui lòng nhập số người phụ thuộc.')
