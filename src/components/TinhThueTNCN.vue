@@ -124,7 +124,7 @@
         <div class="showResult">
             <div class="text-center" v-if="showResult">
                 <p class="text-result">
-                    Xin chào bạn!
+                    <b>Xin chào bạn!</b>
                     <br> Cảm ơn bạn đã dùng công cụ này của Base.vn!<br>
                     Với Dữ liệu đã cung cấp thì Số tiền Thuế TNCN là: <span style="color: #1e88e5"><b></b> {{ numberFormat(tax) }} đ<b></b></span></p>
             </div>
