@@ -481,7 +481,7 @@
             bhxhIndex++;
           }
           let giaidoanHtml =
-            '<div class="table-group 881nvuiumu huongthaisan">' +
+            '<div class="table-group 881nvuiumu huongthaisan"><div class="w-7">' +
             '<span class="button ic iconlvn-c-info icerror" style="display:none;"></span>' +
             '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
             (bhxhIndex < 10 ? "0" + bhxhIndex : bhxhIndex) +
@@ -526,10 +526,10 @@
           giaidoanHtml +=
             "</select>" +
             "</div>" +
-            '<div class="table-cell m-cell5">' +
+            '</div><div class="w-5"><div class="table-cell m-cell5">' +
             '<div class="item-wtext"><em>(Giai đoạn hưởng thai sản)</em></div>' +
             '<a href="javascript:void(0)" rel="nofollow" title="Xóa giai hưởng thai sản" data-toggle-target="#xoa-giaidoan-target" class="ic icon-binlvn del-row"></a>' +
-            "</div>" +
+            "</div></div>" +
             "</div>";
           giai_doan_parent.append(giaidoanHtml);
         }
