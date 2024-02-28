@@ -95,8 +95,11 @@
                         </div>
                     </div>
                     <div class="table-group fixmg"><span class="btn-bhxh 9s56i2p4jd">+ Thêm giai đoạn</span> <span
-                        class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> <span
-                        class="btn-bhxh bgtinh 764s2cypn5">Tính BHXH</span></div>
+                        class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> 
+                    </div>
+                    <div class="form-btn">
+                        <span class="btn-bhxh bgtinh 764s2cypn5">Tính bảo hiểm xã hội</span>
+                    </div>
                     <p class="thue-note">Lưu ý: Vui lòng nhập quá trình đóng BHXH theo thứ tự lần lượt từ khi bắt
                         đầu đóng bảo hiểm đến khi ngừng đóng.
                     </p>

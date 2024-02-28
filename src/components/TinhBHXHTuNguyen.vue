@@ -127,9 +127,9 @@
               <span class="btn-bhxh 9s56i2p4jd bhxhtunguyen"
                 >+ Thêm giai đoạn</span
               >
-              <span class="btn-bhxh bgtinh 764s2cypn5 bhxhtunguyen"
-                >Tính BHXH</span
-              >
+            </div>
+            <div class="form-btn">
+                <span class="btn-bhxh bgtinh 764s2cypn5 bhxhtunguyen">Tính bảo hiểm xã hội</span>
             </div>
             <p class="thue-note">
               Lưu ý: Vui lòng nhập quá trình đóng BHXH theo thứ tự lần lượt từ

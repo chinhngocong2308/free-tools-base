@@ -4321,8 +4321,13 @@ hr {
 .table-group.fixmg {
     margin-top: 8px;
     margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
-
+.form-btn {
+    margin-bottom: 20px;
+    display: inline-block;
+}
 .select36.fixwcel {
     width: 210px;
     margin-left: 18px;
@@ -4355,9 +4360,10 @@ hr {
     cursor: pointer;
     padding: 0 12px;
     min-width: 150px;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 15px;
     color: #1f61ea;
-    text-transform: uppercase;
+    text-transform: normal;
     text-align: center;
     border-radius: 3px;
     margin-right: 24px;
@@ -16968,7 +16974,7 @@ html {
     font-family: 'Font Awesome 6 Free';
     position: absolute;
     top: 9px;
-    left: 20px;
+    left: 15px;
 }
 
 .icon-MIX-iconlvn:before {

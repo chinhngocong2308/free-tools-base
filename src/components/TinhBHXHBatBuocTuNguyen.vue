@@ -21,7 +21,11 @@
                 </div>
                 <div class="bhxhtn">
                     <div id="6w8xviuqf9"></div>
-                    <div class="table-group fixmg"><span class="btn-bhxh 9s56i2p4jd">+ Thêm giai đoạn BHXH bắt buộc</span> <span class="btn-bhxh 9s56i2p4jd bhxhtunguyen">+ Thêm giai đoạn BHXH tự nguyện</span> <span class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> <span class="btn-bhxh bgtinh 764s2cypn5 bhxhbatbuocvatunguyen">Tính BHXH</span></div>
+                    <div class="table-group fixmg"><span class="btn-bhxh 9s56i2p4jd">+ Thêm giai đoạn BHXH bắt buộc</span> <span class="btn-bhxh 9s56i2p4jd bhxhtunguyen">+ Thêm giai đoạn BHXH tự nguyện</span> <span class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> 
+                    </div>
+                    <div class="form-btn">
+                        <span class="btn-bhxh bgtinh 764s2cypn5 bhxhbatbuocvatunguyen">Tính bảo hiểm xã hội</span>
+                    </div>
                     <p class="thue-note">Lưu ý: Vui lòng nhập quá trình đóng BHXH theo thứ tự lần lượt từ khi bắt đầu đóng bảo hiểm đến khi ngừng đóng.</p>
                     <div class="table-group2 pm1p6zqaiw" style="display:none">Tiền BHXH 1 lần được nhận: <span class="color-red">0 đồng</span> </div>
                 </div>
