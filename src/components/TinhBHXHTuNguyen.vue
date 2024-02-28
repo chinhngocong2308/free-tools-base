@@ -67,23 +67,9 @@
                 <div class="table-cell m-cell4">
                   <select class="select select36 from-year">
                     <option value="0">Năm</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
+                    <option v-for="i in rangeYear(fromYear, toYear)" :key="i" :value="i">
+                      {{ i }}
+                    </option>
                   </select>
                 </div>
                 <div class="table-cell m-cell2 from-text">Đến</div>
@@ -107,23 +93,9 @@
                 <div class="table-cell m-cell4">
                   <select class="select select36 to-year">
                     <option value="0">Năm</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
+                    <option v-for="i in rangeYear(fromYear, toYear)" :key="i" :value="i">
+                      {{ i }}
+                    </option>
                   </select>
                 </div>
                 <div class="table-cell m-cell5">
@@ -323,6 +295,8 @@ export default {
     return {
       htmlResultlet: "",
       renderComponent: true,
+      fromYear: 2008,
+      toYear: 2024
     };
   },
   watch: {
@@ -457,7 +431,7 @@ export default {
           '<div class="table-cell m-cell4">' +
           '<select class="select select36 from-year">' +
           '<option value="0">Năm</option>';
-        for (let i = yearIndex; i <= currentYear; i++) {
+        for (let i = currentYear; i >= yearIndex; i--) {
           giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
         }
         giaidoanHtml +=
@@ -477,7 +451,7 @@ export default {
           '<div class="table-cell m-cell4">' +
           '<select class="select select36 to-year">' +
           '<option value="0">Năm</option>';
-        for (let i = yearIndex; i <= currentYear; i++) {
+        for (let i = currentYear; i >= yearIndex; i--) {
           giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
         }
         giaidoanHtml +=
@@ -554,7 +528,7 @@ export default {
           '<div class="table-cell m-cell4">' +
           '<select class="select select36 from-year">' +
           '<option value="0">Năm</option>';
-        for (let i = 1975; i <= currentYear; i++) {
+        for (let i = currentYear; i >= 1975; i--) {
           giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
         }
         giaidoanHtml +=
@@ -574,7 +548,7 @@ export default {
           '<div class="table-cell m-cell4">' +
           '<select class="select select36 to-year">' +
           '<option value="0">Năm</option>';
-        for (let i = 1975; i <= currentYear; i++) {
+        for (let i = currentYear; i >= 1975; i--) {
           giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
         }
         giaidoanHtml +=
@@ -1692,6 +1666,9 @@ export default {
     });
   },
   methods: {
+    rangeYear(start, end) {
+        return Array.from({ length: end - start + 1 }, (_, i) => start + i).sort((a, b) => b - a);
+    },
     forceRerender() {
       this.renderComponent = false;
 

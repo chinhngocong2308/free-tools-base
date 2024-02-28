@@ -266,6 +266,8 @@
     data() {
       return {
         htmlResultlet: "",
+        fromYear: 1975,
+        toYear: 2024
       };
     },
     watch: {
@@ -397,7 +399,7 @@
             '<div class="table-cell m-cell4">' +
             '<select class="select select36 from-year">' +
             '<option value="0">Năm</option>';
-          for (let i = yearIndex; i <= currentYear; i++) {
+          for (let i = currentYear; i >= yearIndex; i--) {
             giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
           }
           giaidoanHtml +=
@@ -417,7 +419,7 @@
             '<div class="table-cell m-cell4">' +
             '<select class="select select36 to-year">' +
             '<option value="0">Năm</option>';
-          for (let i = yearIndex; i <= currentYear; i++) {
+          for (let i = currentYear; i >= yearIndex; i--) {
             giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
           }
           giaidoanHtml +=
@@ -494,7 +496,7 @@
             '<div class="table-cell m-cell4">' +
             '<select class="select select36 from-year">' +
             '<option value="0">Năm</option>';
-          for (let i = 1975; i <= currentYear; i++) {
+          for (let i = currentYear; i >= 1975; i--) {
             giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
           }
           giaidoanHtml +=
@@ -514,7 +516,7 @@
             '<div class="table-cell m-cell4">' +
             '<select class="select select36 to-year">' +
             '<option value="0">Năm</option>';
-          for (let i = 1975; i <= currentYear; i++) {
+          for (let i = currentYear; i >= 1975; i--) {
             giaidoanHtml += '<option value="' + i + '">' + i + "</option>";
           }
           giaidoanHtml +=
@@ -1632,6 +1634,9 @@
       });
     },
     methods: {
+      rangeYear(start, end) {
+            return Array.from({ length: end - start + 1 }, (_, i) => start + i).sort((a, b) => b - a);
+        }
     },
   };
   </script>
