@@ -3985,7 +3985,7 @@ hr {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: normal;
     line-height: 30px;
     margin-top: 0;
     padding-bottom: 12px;
@@ -4001,7 +4001,7 @@ hr {
     float: left;
     width: 100%;
     border-bottom: dashed 1px #cdcdcd;
-    padding: 24px 0;
+    /* padding: 24px 0; */
 }
 
 .thue-content:last-child {
@@ -4252,6 +4252,9 @@ hr {
 }
 
 .head-sst {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     float: left;
     width: 100%;
     font-size: 16px;
@@ -4268,25 +4271,42 @@ hr {
 }
 
 .fix-tt4 {
-    position: absolute;
     right: 60px;
+    align-items: left;
 }
 
 .table-group {
-    float: left;
+    /* float: left; */
+    display: flex;
     width: 100%;
     margin-bottom: 16px;
 }
 
 .table-cell {
     float: left;
+    display: flex;
     color: #666;
     margin-right: 10px;
+    width: 100%;
     line-height: 36px;
     font-size: 16px;
     position: relative;
 }
-
+.table-cell.fixwcel.m-cell1 {
+    display: none!important;
+}
+.w-8 {
+    display: flex;
+    width: 100%;
+}
+.w-7 {
+    display: flex;
+    width: 59%;
+}
+.w-5 {
+    display: flex;
+    width: 41%;
+}
 .table-cell.fixwcel {
     width: 34px;
 }
@@ -4399,12 +4419,26 @@ hr {
 }
 
 .fix-tt5 {
-    position: absolute;
     right: 163px;
+    text-align: left;
+    width: 19%;
 }
-
+.fix-tt2 {
+    width: 61%;
+    text-align: left;
+}
+.bhxh-bat-buoc .fix-tt2 {
+    width: 81%;
+    text-align: left;
+}
+.bhxh-bat-buoc .fix-tt4 {
+    width: 19%;
+    text-align: left;
+}
 .fix-tt4.fix-tt4-2 {
     right: 350px;
+    width: 20%;
+    text-align: left;
 }
 
 @media only screen and (max-width: 960px) {
@@ -8302,9 +8336,12 @@ select:disabled {
 .input,
 .select {
     height: 40px;
+    width: 100%;
     padding: 0 8px
 }
-
+.table-cell.m-cell2.from-text {
+    width: unset;
+}
 .input,
 .select,
 .textarea {

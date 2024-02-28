@@ -1,322 +1,330 @@
 <template>
     <main class="main" id="site-content">
-       <div class="main-content">
-          <section class="section-thue section-bhxh">
-             <div class="section-content">
+    <div class="main-content">
+        <section class="section-thue section-bhxh">
+            <div class="section-content">
                 <div class="content-left">
-                   <header class="section-header text-center">
-                      <h1 class="thue-title-h1">Hệ thống tính bảo hiểm xã hội 1 lần</h1>
-                      <p class="thue-ptext">Cách tính bảo hiểm xã hội 1 lần đơn giản, dành cho người muốn tự tính tiền
-                         BHXH 1 lần
-                      </p>
-                   </header>
-                   <div class="tabs-bhxh">
-                        <a href="/tinh-bhxh-bat-buoc" class="tabs-bhxh-item active">BHXH
-                      bắt buộc</a> 
-                      <a href="/tinh-bhxh-tu-nguyen"
-                         class="tabs-bhxh-item">BHXH tự nguyện</a> 
-                         <a
-                         href="/tinh-bhxh-bat-buoc-va-tu-nguyen" class="tabs-bhxh-item">Cả BHXH
-                      bắt buộc &amp; BHXH tự nguyện</a>
-                   </div>
-                   <div class="head-sst"><span class="fix-tt1">Stt</span> <span class="fix-tt2">Giai đoạn nộp
-                      BHXH</span> <span class="fix-tt4 fdttt">Mức lương đóng BHXH</span>
-                   </div>
-                   <div class="thue-content">
-                      <div id="6w8xviuqf9">
-                         <div class="table-group 881nvuiumu">
+                <header class="section-header text-left">
+                    <h1 class="thue-title-h1">Công cụ tính bảo hiểm xã hội một lần online miễn phí 2024</h1>
+                    <p class="thue-ptext">
+                        Nếu nghỉ việc hoặc không đóng bảo hiểm xã hội trong vòng 1 năm, bạn có thể được nhận bảo hiểm xã hội một lần dù chưa đến tuổi về hưu hay nhận lương hưu. Đây là khoản hỗ trợ từ BHXH và Nhà nước dành cho người lao động. Để nhận khoản tiền này, người lao động cần chuẩn bị thủ tục nhận bảo hiểm xã hội một lần. Công cụ tính bảo hiểm xã hội một lần dưới đây của Base.vn sẽ giúp bạn hiểu rõ về loại hình bảo hiểm này cũng như cách tính BHXH một lần mà bạn có thể nhận được để đảm bảo quyền lợi của chính mình.
+                    </p>
+                </header>
+                <div class="tabs-bhxh">
+                    <a href="/tinh-bhxh-bat-buoc" class="tabs-bhxh-item active">BHXH
+                    bắt buộc</a> 
+                    <a href="/tinh-bhxh-tu-nguyen"
+                        class="tabs-bhxh-item">BHXH tự nguyện</a> 
+                    <a
+                        href="/tinh-bhxh-bat-buoc-va-tu-nguyen" class="tabs-bhxh-item">Cả BHXH
+                    bắt buộc &amp; BHXH tự nguyện</a>
+                </div>
+                <div class="head-sst bhxh-bat-buoc">
+                    <!-- <span class="fix-tt1">Stt</span>  -->
+                    <div class="fix-tt2">Giai đoạn nộp BHXH</div> 
+                    <div class="fix-tt4 fdttt">Mức lương đóng BHXH</div>
+                </div>
+                <div class="thue-content">
+                    <div id="6w8xviuqf9">
+                        <div class="table-group 881nvuiumu">
                             <span class="button ic iconlvn-c-info icerror" style="display:none"></span>
                             <div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn</span> <span
                                class="number">01</span></div>
-                            <div class="table-cell m-cell2">Từ</div>
-                            <div class="table-cell m-cell3">
-                               <select class="select select36 from-month">
-                                  <option value="0">Tháng</option>
-                                  <option value="1">01</option>
-                                  <option value="2">02</option>
-                                  <option value="3">03</option>
-                                  <option value="4">04</option>
-                                  <option value="5">05</option>
-                                  <option value="6">06</option>
-                                  <option value="7">07</option>
-                                  <option value="8">08</option>
-                                  <option value="9">09</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                               </select>
+                            <div class="w-8">
+                                <!-- <div class="table-cell fixwcel m-cell1">
+                                    <span class="p-hide">Giai đoạn</span>
+                                </div> -->
+                                <div class="table-cell m-cell3">
+                                    <select class="select select36 from-month">
+                                        <option value="0">Tháng</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="table-cell m-cell4">
+                                    <select class="select select36 from-year">
+                                        <option value="0">Năm</option>
+                                        <option value="1975">1975</option>
+                                        <option value="1976">1976</option>
+                                        <option value="1977">1977</option>
+                                        <option value="1978">1978</option>
+                                        <option value="1979">1979</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1981">1981</option>
+                                        <option value="1982">1982</option>
+                                        <option value="1983">1983</option>
+                                        <option value="1984">1984</option>
+                                        <option value="1985">1985</option>
+                                        <option value="1986">1986</option>
+                                        <option value="1987">1987</option>
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                </div>
+                                <div class="table-cell m-cell2 from-text">Đến</div>
+                                <div class="table-cell m-cell3">
+                                    <select class="select select36 to-month">
+                                        <option value="0">Tháng</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="table-cell m-cell4">
+                                    <select class="select select36 to-year">
+                                        <option value="0">Năm</option>
+                                        <option value="1975">1975</option>
+                                        <option value="1976">1976</option>
+                                        <option value="1977">1977</option>
+                                        <option value="1978">1978</option>
+                                        <option value="1979">1979</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1981">1981</option>
+                                        <option value="1982">1982</option>
+                                        <option value="1983">1983</option>
+                                        <option value="1984">1984</option>
+                                        <option value="1985">1985</option>
+                                        <option value="1986">1986</option>
+                                        <option value="1987">1987</option>
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="table-cell m-cell4">
-                               <select class="select select36 from-year">
-                                  <option value="0">Năm</option>
-                                  <option value="1975">1975</option>
-                                  <option value="1976">1976</option>
-                                  <option value="1977">1977</option>
-                                  <option value="1978">1978</option>
-                                  <option value="1979">1979</option>
-                                  <option value="1980">1980</option>
-                                  <option value="1981">1981</option>
-                                  <option value="1982">1982</option>
-                                  <option value="1983">1983</option>
-                                  <option value="1984">1984</option>
-                                  <option value="1985">1985</option>
-                                  <option value="1986">1986</option>
-                                  <option value="1987">1987</option>
-                                  <option value="1988">1988</option>
-                                  <option value="1989">1989</option>
-                                  <option value="1990">1990</option>
-                                  <option value="1991">1991</option>
-                                  <option value="1992">1992</option>
-                                  <option value="1993">1993</option>
-                                  <option value="1994">1994</option>
-                                  <option value="1995">1995</option>
-                                  <option value="1996">1996</option>
-                                  <option value="1997">1997</option>
-                                  <option value="1998">1998</option>
-                                  <option value="1999">1999</option>
-                                  <option value="2000">2000</option>
-                                  <option value="2001">2001</option>
-                                  <option value="2002">2002</option>
-                                  <option value="2003">2003</option>
-                                  <option value="2004">2004</option>
-                                  <option value="2005">2005</option>
-                                  <option value="2006">2006</option>
-                                  <option value="2007">2007</option>
-                                  <option value="2008">2008</option>
-                                  <option value="2009">2009</option>
-                                  <option value="2010">2010</option>
-                                  <option value="2011">2011</option>
-                                  <option value="2012">2012</option>
-                                  <option value="2013">2013</option>
-                                  <option value="2014">2014</option>
-                                  <option value="2015">2015</option>
-                                  <option value="2016">2016</option>
-                                  <option value="2017">2017</option>
-                                  <option value="2018">2018</option>
-                                  <option value="2019">2019</option>
-                                  <option value="2020">2020</option>
-                                  <option value="2021">2021</option>
-                                  <option value="2022">2022</option>
-                                  <option value="2023">2023</option>
-                                  <option value="2024">2024</option>
-                               </select>
+                            <div class="w-4">
+                                <div class="table-cell m-cell5"><input class="input select36 fixwcel 1236il9bpn"
+                                placeholder="Mức lương đóng BHXH"> <a href="javascript:void(0)" rel="nofollow"
+                                title="Xóa giai đoạn nộp BHXH" data-toggle-target="#xoa-giaidoan-target"
+                                class="ic icon-binlvn del-row"></a></div>
                             </div>
-                            <div class="table-cell m-cell2">Đến</div>
-                            <div class="table-cell m-cell3">
-                               <select class="select select36 to-month">
-                                  <option value="0">Tháng</option>
-                                  <option value="1">01</option>
-                                  <option value="2">02</option>
-                                  <option value="3">03</option>
-                                  <option value="4">04</option>
-                                  <option value="5">05</option>
-                                  <option value="6">06</option>
-                                  <option value="7">07</option>
-                                  <option value="8">08</option>
-                                  <option value="9">09</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                               </select>
-                            </div>
-                            <div class="table-cell m-cell4">
-                               <select class="select select36 to-year">
-                                  <option value="0">Năm</option>
-                                  <option value="1975">1975</option>
-                                  <option value="1976">1976</option>
-                                  <option value="1977">1977</option>
-                                  <option value="1978">1978</option>
-                                  <option value="1979">1979</option>
-                                  <option value="1980">1980</option>
-                                  <option value="1981">1981</option>
-                                  <option value="1982">1982</option>
-                                  <option value="1983">1983</option>
-                                  <option value="1984">1984</option>
-                                  <option value="1985">1985</option>
-                                  <option value="1986">1986</option>
-                                  <option value="1987">1987</option>
-                                  <option value="1988">1988</option>
-                                  <option value="1989">1989</option>
-                                  <option value="1990">1990</option>
-                                  <option value="1991">1991</option>
-                                  <option value="1992">1992</option>
-                                  <option value="1993">1993</option>
-                                  <option value="1994">1994</option>
-                                  <option value="1995">1995</option>
-                                  <option value="1996">1996</option>
-                                  <option value="1997">1997</option>
-                                  <option value="1998">1998</option>
-                                  <option value="1999">1999</option>
-                                  <option value="2000">2000</option>
-                                  <option value="2001">2001</option>
-                                  <option value="2002">2002</option>
-                                  <option value="2003">2003</option>
-                                  <option value="2004">2004</option>
-                                  <option value="2005">2005</option>
-                                  <option value="2006">2006</option>
-                                  <option value="2007">2007</option>
-                                  <option value="2008">2008</option>
-                                  <option value="2009">2009</option>
-                                  <option value="2010">2010</option>
-                                  <option value="2011">2011</option>
-                                  <option value="2012">2012</option>
-                                  <option value="2013">2013</option>
-                                  <option value="2014">2014</option>
-                                  <option value="2015">2015</option>
-                                  <option value="2016">2016</option>
-                                  <option value="2017">2017</option>
-                                  <option value="2018">2018</option>
-                                  <option value="2019">2019</option>
-                                  <option value="2020">2020</option>
-                                  <option value="2021">2021</option>
-                                  <option value="2022">2022</option>
-                                  <option value="2023">2023</option>
-                                  <option value="2024">2024</option>
-                               </select>
-                            </div>
-                            <div class="table-cell m-cell5"><input class="input select36 fixwcel 1236il9bpn"
-                               placeholder="Mức lương đóng BHXH"> <a href="javascript:void(0)" rel="nofollow"
-                               title="Xóa giai đoạn nộp BHXH" data-toggle-target="#xoa-giaidoan-target"
-                               class="ic icon-binlvn del-row"></a></div>
-                         </div>
-                      </div>
-                      <div class="table-group fixmg"><span class="btn-bhxh 9s56i2p4jd">+ Thêm giai đoạn</span> <span
-                         class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> <span
-                         class="btn-bhxh bgtinh 764s2cypn5">Tính BHXH</span></div>
-                      <p class="thue-note">Lưu ý: Vui lòng nhập quá trình đóng BHXH theo thứ tự lần lượt từ khi bắt
-                         đầu đóng bảo hiểm đến khi ngừng đóng.
-                      </p>
-                      <div class="table-group2 pm1p6zqaiw" style="display:none">
-                         Tiền BHXH 1 lần được nhận: <span
+                        </div>
+                    </div>
+                    <div class="table-group fixmg"><span class="btn-bhxh 9s56i2p4jd">+ Thêm giai đoạn</span> <span
+                        class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> <span
+                        class="btn-bhxh bgtinh 764s2cypn5">Tính BHXH</span></div>
+                    <p class="thue-note">Lưu ý: Vui lòng nhập quá trình đóng BHXH theo thứ tự lần lượt từ khi bắt
+                        đầu đóng bảo hiểm đến khi ngừng đóng.
+                    </p>
+                    <div class="table-group2 pm1p6zqaiw" style="display:none">
+                        Tiền BHXH 1 lần được nhận: <span
                             class="color-red">0 đồng</span> 
-                      </div>
-                   </div>
-                   <div class="thue-content 8gwrvbfe29">
-                      <div class="thue-title" style="display:none"><em>Diễn giải cách tính BHXH 1 lần</em></div>
-                      <div class="thue-body fix-hight-thue-body" style="display:none"></div>
-                      <div class="fix-xemthem lpwjzzzzne" style="display:none"><span class="btnxemthem">Xem
-                         thêm</span>
-                      </div>
-                   </div>
-                   <div class="thue-content">
-                      <div class="thue-title2">Bảng hệ số trượt giá năm 2024</div>
-                      <div class="thue-body">
-                         <div class="m-scroll-x">
+                    </div>
+                </div>
+                <div class="thue-content 8gwrvbfe29">
+                    <div class="thue-title" style="display:none"><em>Diễn giải cách tính BHXH 1 lần</em></div>
+                    <div class="thue-body fix-hight-thue-body" style="display:none"></div>
+                    <div class="fix-xemthem lpwjzzzzne" style="display:none"><span class="btnxemthem">Xem
+                        thêm</span>
+                    </div>
+                </div>
+                <div class="thue-content">
+                    <div class="thue-title2">Bảng hệ số trượt giá năm 2024</div>
+                    <div class="thue-body">
+                        <div class="m-scroll-x">
                             <table class="table table-bordered text-center fn-14">
-                               <tbody>
-                                  <tr>
-                                     <td><strong>Năm</strong></td>
-                                     <td><strong>Trước 1995</strong></td>
-                                     <td><strong>1995</strong></td>
-                                     <td><strong>1996</strong></td>
-                                     <td><strong>1997</strong></td>
-                                     <td><strong>1998</strong></td>
-                                     <td><strong>1999</strong></td>
-                                     <td><strong>2000</strong></td>
-                                     <td><strong>2001</strong></td>
-                                     <td><strong>2002</strong></td>
-                                     <td><strong>2003</strong></td>
-                                     <td><strong>2004</strong></td>
-                                     <td><strong>2005</strong></td>
-                                     <td><strong>2006</strong></td>
-                                     <td><strong>2007</strong></td>
-                                  </tr>
-                                  <tr>
-                                     <td><strong>Mức điều chỉnh</strong></td>
-                                     <td class="0wm5f0tax8" data-y="0">5,26</td>
-                                     <td class="0wm5f0tax8" data-y="1995">4,46</td>
-                                     <td class="0wm5f0tax8" data-y="1996">4,22</td>
-                                     <td class="0wm5f0tax8" data-y="1997">4,09</td>
-                                     <td class="0wm5f0tax8" data-y="1998">3,8</td>
-                                     <td class="0wm5f0tax8" data-y="1999">3,64</td>
-                                     <td class="0wm5f0tax8" data-y="2000">3,7</td>
-                                     <td class="0wm5f0tax8" data-y="2001">3,71</td>
-                                     <td class="0wm5f0tax8" data-y="2002">3,57</td>
-                                     <td class="0wm5f0tax8" data-y="2003">3,46</td>
-                                     <td class="0wm5f0tax8" data-y="2004">3,21</td>
-                                     <td class="0wm5f0tax8" data-y="2005">2,96</td>
-                                     <td class="0wm5f0tax8" data-y="2006">2,76</td>
-                                     <td class="0wm5f0tax8" data-y="2007">2,55</td>
-                                  </tr>
-                                  <tr>
-                                     <td><strong>Năm</strong></td>
-                                     <td><strong>2008</strong></td>
-                                     <td><strong>2009</strong></td>
-                                     <td><strong>2010</strong></td>
-                                     <td><strong>2011</strong></td>
-                                     <td><strong>2012</strong></td>
-                                     <td><strong>2013</strong></td>
-                                     <td><strong>2014</strong></td>
-                                     <td><strong>2015</strong></td>
-                                     <td><strong>2016</strong></td>
-                                     <td><strong>2017</strong></td>
-                                     <td><strong>2018</strong></td>
-                                     <td><strong>2019</strong></td>
-                                     <td><strong>2020</strong></td>
-                                     <td><strong>2021</strong></td>
-                                  </tr>
-                                  <tr>
-                                     <td><strong>Mức điều chỉnh</strong></td>
-                                     <td class="0wm5f0tax8" data-y="2008">2,07</td>
-                                     <td class="0wm5f0tax8" data-y="2009">1,94</td>
-                                     <td class="0wm5f0tax8" data-y="2010">1,77</td>
-                                     <td class="0wm5f0tax8" data-y="2011">1,5</td>
-                                     <td class="0wm5f0tax8" data-y="2012">1,37</td>
-                                     <td class="0wm5f0tax8" data-y="2013">1,28</td>
-                                     <td class="0wm5f0tax8" data-y="2014">1,23</td>
-                                     <td class="0wm5f0tax8" data-y="2015">1,23</td>
-                                     <td class="0wm5f0tax8" data-y="2016">1,19</td>
-                                     <td class="0wm5f0tax8" data-y="2017">1,15</td>
-                                     <td class="0wm5f0tax8" data-y="2018">1,11</td>
-                                     <td class="0wm5f0tax8" data-y="2019">1,08</td>
-                                     <td class="0wm5f0tax8" data-y="2020">1,05</td>
-                                     <td class="0wm5f0tax8" data-y="2021">1,03</td>
-                                  </tr>
-                                  <tr>
-                                     <td><strong>Năm</strong></td>
-                                     <td><strong>2022</strong></td>
-                                     <td><strong>2023</strong></td>
-                                     <td><strong>2024</strong></td>
-                                  </tr>
-                                  <tr>
-                                     <td><strong>Mức điều chỉnh</strong></td>
-                                     <td class="0wm5f0tax8" data-y="2022">1</td>
-                                     <td class="0wm5f0tax8" data-y="2023">1</td>
-                                     <td class="0wm5f0tax8" data-y="2024">1</td>
-                                  </tr>
-                               </tbody>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Năm</strong></td>
+                                    <td><strong>Trước 1995</strong></td>
+                                    <td><strong>1995</strong></td>
+                                    <td><strong>1996</strong></td>
+                                    <td><strong>1997</strong></td>
+                                    <td><strong>1998</strong></td>
+                                    <td><strong>1999</strong></td>
+                                    <td><strong>2000</strong></td>
+                                    <td><strong>2001</strong></td>
+                                    <td><strong>2002</strong></td>
+                                    <td><strong>2003</strong></td>
+                                    <td><strong>2004</strong></td>
+                                    <td><strong>2005</strong></td>
+                                    <td><strong>2006</strong></td>
+                                    <td><strong>2007</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mức điều chỉnh</strong></td>
+                                    <td class="0wm5f0tax8" data-y="0">5,26</td>
+                                    <td class="0wm5f0tax8" data-y="1995">4,46</td>
+                                    <td class="0wm5f0tax8" data-y="1996">4,22</td>
+                                    <td class="0wm5f0tax8" data-y="1997">4,09</td>
+                                    <td class="0wm5f0tax8" data-y="1998">3,8</td>
+                                    <td class="0wm5f0tax8" data-y="1999">3,64</td>
+                                    <td class="0wm5f0tax8" data-y="2000">3,7</td>
+                                    <td class="0wm5f0tax8" data-y="2001">3,71</td>
+                                    <td class="0wm5f0tax8" data-y="2002">3,57</td>
+                                    <td class="0wm5f0tax8" data-y="2003">3,46</td>
+                                    <td class="0wm5f0tax8" data-y="2004">3,21</td>
+                                    <td class="0wm5f0tax8" data-y="2005">2,96</td>
+                                    <td class="0wm5f0tax8" data-y="2006">2,76</td>
+                                    <td class="0wm5f0tax8" data-y="2007">2,55</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Năm</strong></td>
+                                    <td><strong>2008</strong></td>
+                                    <td><strong>2009</strong></td>
+                                    <td><strong>2010</strong></td>
+                                    <td><strong>2011</strong></td>
+                                    <td><strong>2012</strong></td>
+                                    <td><strong>2013</strong></td>
+                                    <td><strong>2014</strong></td>
+                                    <td><strong>2015</strong></td>
+                                    <td><strong>2016</strong></td>
+                                    <td><strong>2017</strong></td>
+                                    <td><strong>2018</strong></td>
+                                    <td><strong>2019</strong></td>
+                                    <td><strong>2020</strong></td>
+                                    <td><strong>2021</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mức điều chỉnh</strong></td>
+                                    <td class="0wm5f0tax8" data-y="2008">2,07</td>
+                                    <td class="0wm5f0tax8" data-y="2009">1,94</td>
+                                    <td class="0wm5f0tax8" data-y="2010">1,77</td>
+                                    <td class="0wm5f0tax8" data-y="2011">1,5</td>
+                                    <td class="0wm5f0tax8" data-y="2012">1,37</td>
+                                    <td class="0wm5f0tax8" data-y="2013">1,28</td>
+                                    <td class="0wm5f0tax8" data-y="2014">1,23</td>
+                                    <td class="0wm5f0tax8" data-y="2015">1,23</td>
+                                    <td class="0wm5f0tax8" data-y="2016">1,19</td>
+                                    <td class="0wm5f0tax8" data-y="2017">1,15</td>
+                                    <td class="0wm5f0tax8" data-y="2018">1,11</td>
+                                    <td class="0wm5f0tax8" data-y="2019">1,08</td>
+                                    <td class="0wm5f0tax8" data-y="2020">1,05</td>
+                                    <td class="0wm5f0tax8" data-y="2021">1,03</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Năm</strong></td>
+                                    <td><strong>2022</strong></td>
+                                    <td><strong>2023</strong></td>
+                                    <td><strong>2024</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mức điều chỉnh</strong></td>
+                                    <td class="0wm5f0tax8" data-y="2022">1</td>
+                                    <td class="0wm5f0tax8" data-y="2023">1</td>
+                                    <td class="0wm5f0tax8" data-y="2024">1</td>
+                                </tr>
+                            </tbody>
                             </table>
-                         </div>
-                      </div>
-                   </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </section>
-          <div id="xoa-giaidoan-target" class="popup-bg target-hidden">
-             <div class="popup-wrapper popup-340">
+                </div>
+            </div>
+        </section>
+        <div id="xoa-giaidoan-target" class="popup-bg target-hidden">
+            <div class="popup-wrapper popup-340">
                 <div class="popup-body">
-                   <span class="close-popup btn-hidden-popup" data-toggle-target="#xoa-giaidoan-target"><i
-                      class="iconlvn-remove"></i></span>
-                   <div class="popup-content popup-height">
-                      <div class="form-control pad16-24">
-                         <div class="form-group text-center"><span class="text-20 font-bold">Bạn muốn xóa giai đoạn
+                <span class="close-popup btn-hidden-popup" data-toggle-target="#xoa-giaidoan-target"><i
+                    class="iconlvn-remove"></i></span>
+                <div class="popup-content popup-height">
+                    <div class="form-control pad16-24">
+                        <div class="form-group text-center"><span class="text-20 font-bold">Bạn muốn xóa giai đoạn
                             này?</span>
-                         </div>
-                         <div class="form-group text-center">
+                        </div>
+                        <div class="form-group text-center">
                             <div class="btn-item"><span data-toggle-target="#xoa-giaidoan-target"
-                               class="btn btn-hidden-popup">Hủy</span></div>
+                            class="btn btn-hidden-popup">Hủy</span></div>
                             <div class="btn-item"><span data-toggle-target="#xoa-giaidoan-target"
-                               class="btn btn-default wmvq3u48nn" data-id=" 03">Xác nhận</span></div>
-                         </div>
-                      </div>
-                   </div>
+                            class="btn btn-default wmvq3u48nn" data-id=" 03">Xác nhận</span></div>
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
  </template>
- 1
+ 
 <script>
 import $ from "jquery";
 import "../assets/css/baohiemxh.css";
@@ -443,7 +451,7 @@ export default {
                         '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
                         (bhxhIndex < 10 ? '0' + bhxhIndex : bhxhIndex) +
                         '</span></div>' +
-                        '<div class="table-cell m-cell2">Từ </div>' +
+                        '' +
                         '<div class="table-cell m-cell3">' +
                         '<select class="select select36 from-month">' +
                         '<option value="0">Tháng</option>';
@@ -460,7 +468,7 @@ export default {
                     }
                     giaidoanHtml += '</select>' +
                         '</div>' +
-                        '<div class="table-cell m-cell2">Đến</div>' +
+                        '<div class="table-cell m-cell2 from-text">Đến</div>' +
                         '<div class="table-cell m-cell3">' +
                         '<select class="select select36 to-month">' +
                         '<option value="0">Tháng</option>';
@@ -520,7 +528,7 @@ export default {
                         '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
                         (bhxhIndex < 10 ? '0' + bhxhIndex : bhxhIndex) +
                         '</span></div>' +
-                        '<div class="table-cell m-cell2">Từ </div>' +
+                        '' +
                         '<div class="table-cell m-cell3">' +
                         '<select class="select select36 from-month">' +
                         '<option value="0">Tháng</option>';
@@ -537,7 +545,7 @@ export default {
                     }
                     giaidoanHtml += '</select>' +
                         '</div>' +
-                        '<div class="table-cell m-cell2">Đến</div>' +
+                        '<div class="table-cell m-cell2 from-text">Đến</div>' +
                         '<div class="table-cell m-cell3">' +
                         '<select class="select select36 to-month">' +
                         '<option value="0">Tháng</option>';

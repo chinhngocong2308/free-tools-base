@@ -3,14 +3,22 @@
       <div class="main-content">
         <section class="section-thue section-bhxh">
             <div class="block">
-                <header class="section-header text-center">
-                    <h1 class="thue-title-h1">Hệ thống tính bảo hiểm xã hội 1 lần</h1>
-                    <p class="thue-ptext">Hệ thống tính bảo hiểm xã hội 1 lần dành cho đối tượng muốn tự tính tổng tiền BHXH 1 lần</p>
+                <header class="section-header text-left">
+                    <h1 class="thue-title-h1">Công cụ tính bảo hiểm xã hội một lần online miễn phí 2024
+</h1>
+                    <p class="thue-ptext">
+                      Nếu nghỉ việc hoặc không đóng bảo hiểm xã hội trong vòng 1 năm, bạn có thể được nhận bảo hiểm xã hội một lần dù chưa đến tuổi về hưu hay nhận lương hưu. Đây là khoản hỗ trợ từ BHXH và Nhà nước dành cho người lao động. Để nhận khoản tiền này, người lao động cần chuẩn bị thủ tục nhận bảo hiểm xã hội một lần. Công cụ tính bảo hiểm xã hội một lần dưới đây của Base.vn sẽ giúp bạn hiểu rõ về loại hình bảo hiểm này cũng như cách tính BHXH một lần mà bạn có thể nhận được để đảm bảo quyền lợi của chính mình.
+</p>
                 </header>
                 <div class="tabs-bhxh">
                     <a href="/tinh-bhxh-bat-buoc" title="BHXH bắt buộc" class="tabs-bhxh-item">BHXH bắt buộc</a> <a href="/tinh-bhxh-tu-nguyen" title="BHXH tự nguyện" class="tabs-bhxh-item">BHXH tự nguyện</a> <a href="/tinh-bhxh-bat-buoc-va-tu-nguyen" title="Cả BHXH bắt buộc &amp; BHXH tự nguyện" class="tabs-bhxh-item active">Cả BHXH bắt buộc &amp; BHXH tự nguyện</a>
                 </div>
-                <div class="head-sst"><span class="fix-tt1">Stt</span> <span class="fix-tt2">Giai đoạn nộp BHXH</span> <span class="fix-tt4 fix-tt4-2">Mức lương đóng BHXH</span> <span class="fix-tt5">Đối tượng tham gia</span></div>
+                <div class="head-sst">
+                  <!-- <span class="fix-tt1">Stt</span>  -->
+                  <span class="fix-tt2">Giai đoạn nộp BHXH</span> 
+                  <span class="fix-tt4 fix-tt4-2">Mức lương đóng BHXH</span> 
+                  <span class="fix-tt5">Đối tượng tham gia</span>
+                </div>
                 <div class="bhxhtn">
                     <div id="6w8xviuqf9"></div>
                     <div class="table-group fixmg"><span class="btn-bhxh 9s56i2p4jd">+ Thêm giai đoạn BHXH bắt buộc</span> <span class="btn-bhxh 9s56i2p4jd bhxhtunguyen">+ Thêm giai đoạn BHXH tự nguyện</span> <span class="btn-bhxh o9l4vf3d11 bgc-vien">+ giai đoạn thai sản</span> <span class="btn-bhxh bgtinh 764s2cypn5 bhxhbatbuocvatunguyen">Tính BHXH</span></div>
@@ -371,11 +379,11 @@
           else bhxhIndex++;
           let giaidoanHtml =
             '<div class="table-group 881nvuiumu">' +
-            '<span class="button ic iconlvn-c-info icerror" style="display:none;"></span>' +
-            '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
+            '<span class="button ic iconlvn-c-info icerror" style="display:none;"></span><div class="w-7">' +
+              '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
             (bhxhIndex < 10 ? "0" + bhxhIndex : bhxhIndex) +
             "</span></div>" +
-            '<div class="table-cell m-cell2">Từ </div>' +
+            '' +
             '<div class="table-cell m-cell3">' +
             '<select class="select select36 from-month">' +
             '<option value="0">Tháng</option>';
@@ -395,7 +403,7 @@
           giaidoanHtml +=
             "</select>" +
             "</div>" +
-            '<div class="table-cell m-cell2">Đến</div>' +
+            '<div class="table-cell m-cell2 from-text">Đến</div>' +
             '<div class="table-cell m-cell3">' +
             '<select class="select select36 to-month">' +
             '<option value="0">Tháng</option>';
@@ -415,10 +423,10 @@
           giaidoanHtml +=
             "</select>" +
             "</div>" +
-            '<div class="table-cell m-cell5">' +
+            '</div><div class="w-5"><div class="table-cell m-cell5">' +
             '<input class="input select36 fixwcel 1236il9bpn" placeholder="Mức ' +
             text_tienluong +
-            ' đóng BHXH">';
+            ' đóng BHXH"> ';
           if (!bhxhtunguyen && !bhxhbatbuocvatunguyen)
             giaidoanHtml +=
               '<a href="javascript:void(0)" rel="nofollow" title="Xóa giai đoạn nộp BHXH" data-toggle-target="#xoa-giaidoan-target" class="ic icon-binlvn del-row"></a>';
@@ -434,7 +442,7 @@
               '<select class="select select36 fixwcel2 mmsrtdr71n"><option value="1">BHXH bắt buộc</option><option value="2">BHXH tự nguyện</option></select>' +
               '<a href="javascript:void(0)" rel="nofollow" title="Xóa giai đoạn nộp BHXH" data-toggle-target="#xoa-giaidoan-target" class="ic icon-binlvn del-row"></a></div>';
           }
-          giaidoanHtml += "</div>";
+          giaidoanHtml += "</div></div>";
           giai_doan_parent.append(giaidoanHtml);
         }
       });
@@ -472,7 +480,7 @@
             '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
             (bhxhIndex < 10 ? "0" + bhxhIndex : bhxhIndex) +
             "</span></div>" +
-            '<div class="table-cell m-cell2">Từ </div>' +
+            '' +
             '<div class="table-cell m-cell3">' +
             '<select class="select select36 from-month">' +
             '<option value="0">Tháng</option>';
@@ -492,7 +500,7 @@
           giaidoanHtml +=
             "</select>" +
             "</div>" +
-            '<div class="table-cell m-cell2">Đến</div>' +
+            '<div class="table-cell m-cell2 from-text">Đến</div>' +
             '<div class="table-cell m-cell3">' +
             '<select class="select select36 to-month">' +
             '<option value="0">Tháng</option>';

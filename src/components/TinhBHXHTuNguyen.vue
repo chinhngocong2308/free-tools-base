@@ -3,11 +3,10 @@
     <div class="main-content">
       <section class="section-thue section-bhxh">
         <div class="block">
-          <header class="section-header text-center">
-            <h1 class="thue-title-h1">Hệ thống tính bảo hiểm xã hội 1 lần</h1>
-            <p class="thue-ptext">
-              Hệ thống tính bảo hiểm xã hội 1 lần dành cho đối tượng muốn tự
-              tính tổng tiền BHXH 1 lần
+          <header class="section-header text-left">
+            <h1 class="thue-title-h1">Công cụ tính bảo hiểm xã hội một lần online miễn phí 2024
+</h1>
+            <p class="thue-ptext">Nếu nghỉ việc hoặc không đóng bảo hiểm xã hội trong vòng 1 năm, bạn có thể được nhận bảo hiểm xã hội một lần dù chưa đến tuổi về hưu hay nhận lương hưu. Đây là khoản hỗ trợ từ BHXH và Nhà nước dành cho người lao động. Để nhận khoản tiền này, người lao động cần chuẩn bị thủ tục nhận bảo hiểm xã hội một lần. Công cụ tính bảo hiểm xã hội một lần dưới đây của Base.vn sẽ giúp bạn hiểu rõ về loại hình bảo hiểm này cũng như cách tính BHXH một lần mà bạn có thể nhận được để đảm bảo quyền lợi của chính mình.
             </p>
           </header>
           <div class="tabs-bhxh">
@@ -30,13 +29,13 @@
               >Cả BHXH bắt buộc &amp; BHXH tự nguyện</a
             >
           </div>
-          <div class="head-sst">
-            <span class="fix-tt1">Stt</span>
-            <span class="fix-tt2" style="float: left ">Giai đoạn nộp BHXH</span>
-            <span class="fix-tt4 fix-tt4-2">Mức thu nhập đóng BHXH</span>
-            <span class="fix-tt5">Đối tượng tham gia</span>
-          </div>
+
           <div class="bhxhtn">
+            <div class="head-sst">
+              <div class="fix-tt2" style="float: left ">Giai đoạn nộp BHXH</div>
+              <div class="fix-tt4 fix-tt4-2">Mức thu nhập đóng BHXH</div>
+              <div class="fix-tt5">Đối tượng tham gia</div>
+            </div>
             <div id="6w8xviuqf9">
               <div class="table-group 881nvuiumu">
                 <span
@@ -47,7 +46,7 @@
                   <span class="p-hide">Giai đoạn</span>
                   <span class="number">01</span>
                 </div>
-                <div class="table-cell m-cell2">Từ</div>
+                <!-- <div class="table-cell m-cell2">Từ</div> -->
                 <div class="table-cell m-cell3">
                   <select class="select select36 from-month">
                     <option value="0">Tháng</option>
@@ -87,7 +86,7 @@
                     <option value="2024">2024</option>
                   </select>
                 </div>
-                <div class="table-cell m-cell2">Đến</div>
+                <div class="table-cell m-cell2 from-text">Đến</div>
                 <div class="table-cell m-cell3">
                   <select class="select select36 to-month">
                     <option value="0">Tháng</option>
@@ -444,7 +443,7 @@ export default {
           '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
           (bhxhIndex < 10 ? "0" + bhxhIndex : bhxhIndex) +
           "</span></div>" +
-          '<div class="table-cell m-cell2">Từ </div>' +
+          '' +
           '<div class="table-cell m-cell3">' +
           '<select class="select select36 from-month">' +
           '<option value="0">Tháng</option>';
@@ -464,7 +463,7 @@ export default {
         giaidoanHtml +=
           "</select>" +
           "</div>" +
-          '<div class="table-cell m-cell2">Đến</div>' +
+          '<div class="table-cell m-cell2 from-text">Đến</div>' +
           '<div class="table-cell m-cell3">' +
           '<select class="select select36 to-month">' +
           '<option value="0">Tháng</option>';
@@ -541,7 +540,7 @@ export default {
           '<div class="table-cell fixwcel m-cell1"><span class="p-hide">Giai đoạn </span><span class="number"> ' +
           (bhxhIndex < 10 ? "0" + bhxhIndex : bhxhIndex) +
           "</span></div>" +
-          '<div class="table-cell m-cell2">Từ </div>' +
+          '' +
           '<div class="table-cell m-cell3">' +
           '<select class="select select36 from-month">' +
           '<option value="0">Tháng</option>';
@@ -561,7 +560,7 @@ export default {
         giaidoanHtml +=
           "</select>" +
           "</div>" +
-          '<div class="table-cell m-cell2">Đến</div>' +
+          '<div class="table-cell m-cell2 from-text">Đến</div>' +
           '<div class="table-cell m-cell3">' +
           '<select class="select select36 to-month">' +
           '<option value="0">Tháng</option>';
