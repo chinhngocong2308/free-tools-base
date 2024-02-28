@@ -4452,7 +4452,7 @@ hr {
         box-shadow: none;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
-        padding: 0;
+        padding: 15px;
     }
 
     .col-thue-1 {
@@ -8040,7 +8040,6 @@ ul.ul_navigation ul li ul {
     .content-left {
         float: left;
         width: 100%;
-        padding: 15px;
     }
 
     .btn-login {
