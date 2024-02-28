@@ -4508,7 +4508,7 @@ hr {
         width: 10%;
         margin-right: 3%;
     }
-
+    .table-cell.m-cell2.from-text { width: unset; margin-left: 10px; margin-right: 10px; }
     .table-cell.m-cell3 {
         width: 42%;
         margin-right: 3%;
@@ -4546,7 +4546,7 @@ hr {
 
     .btn-bhxh {
         width: 100%;
-        margin-right: 0;
+        margin: 15px;
         margin-bottom: 12px;
     }
 
@@ -8040,7 +8040,7 @@ ul.ul_navigation ul li ul {
     .content-left {
         float: left;
         width: 100%;
-        padding: 0
+        padding: 15px;
     }
 
     .btn-login {
